@@ -1,0 +1,68 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p>The <span><em><span><strong><span>Atomes</span></strong></span></em></span> program includes a library with a number of molecules to be used when building or editing atomistic models:<br />
+</p>
+<div id="libinat">
+<div align="center">
+<figure>
+<img src="/img/edit/atoms/library.png" id="libinat" style="width:12cm" alt="The &quot;Library&quot; dialog of the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 2.1:</span></strong> The "<span><code>Library</code></span>" dialog of the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+Available molecules can be found in the library by sorted in the following families:<br />
+</p>
+<ul>
+<li><p>Misc</p></li>
+<li><p>Alcohols</p></li>
+<li><p>Aldehydes</p></li>
+<li><p>Alkanes</p></li>
+<li><p>Alkenes</p></li>
+<li><p>Alkynes</p></li>
+<li><p>Amides</p></li>
+<li><p>Amines</p></li>
+<li><p>Amino acids</p></li>
+</ul>
+<ul>
+<li><p>Aromatics</p></li>
+<li><p>Carboxylic acids</p></li>
+<li><p>Cyclic alkanes</p></li>
+<li><p>Cyclic alkenes</p></li>
+<li><p>Ethers</p></li>
+<li><p>Fatty acids</p></li>
+<li><p>Fullerenes</p></li>
+<li><p>Heterocyclics</p></li>
+<li><p>Macrocycles</p></li>
+</ul>
+<ul>
+<li><p>Ketones</p></li>
+<li><p>Nitriles</p></li>
+<li><p>Nucleobases</p></li>
+<li><p>Steroids</p></li>
+<li><p>Sugars (Linears)</p></li>
+<li><p>Sugars (Cyclics)</p></li>
+<li><p>Sulfoxides</p></li>
+<li><p>Thiols</p></li>
+</ul>
+<p>Each time a new molecule is selected in the tree view on the left side of the window (see figure <a href="/appendix/app-2#libinat" data-reference-type="ref" data-reference="libinat">2.1</a>), then the right side of the "<span><code>Library</code></span>" dialog is refreshed with the data of the newly selected molecule. The data includes a 3D representation included in an active OpenGL window that allows to rotate the molecule:<br />
+</p>
+<div id="libex">
+<div align="center">
+<figure>
+<img src="/img/lib/libex.png" id="libex" style="width:15cm" alt="Using the &quot;Library&quot; dialog." />
+<figcaption aria-hidden="true"><strong><span>Figure 2.2:</span></strong> Using the "<span><code>Library</code></span>" dialog.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+The data files that contain the information regarding each molecule in the library are located in the "<span><code>bin/library/molecules</code></span>" directory.<br />
+To each molecule that appears in the "<span><code>Library</code></span>" tree view, a file with the "<span><code>.sml</code></span>" extension can be found in the corresponding family subfolder.<br />
+For the example in figure <a href="/appendix/app-2#libex" data-reference-type="ref" data-reference="libex">2.2</a>:</p>
+<ul>
+<li><p>The family is: "<span><code>Aromatics</code></span>"</p></li>
+<li><p>The molecule is: "<span><code>Caffeine</code></span>"</p></li>
+<li><p>The corresponding file is: "<span><code>Aromatics/caffeine.sml</code></span>".</p></li>
+</ul>
+<p>New files can be added to the library to be found by <span><em><span><strong><span>Atomes</span></strong></span></em></span> at startup, providing that the new files are added to one of the families of the library. These files must have the "<span><code>.sml</code></span>" extension, follow the "<span><code>XML</code></span>" encoding rules, and the following structure:</p>
+<h3 class="unnumbered" id="the-scl-simple-chemical-library-xml-file-format">The "<span><code>SCL</code></span>" "Simple chemical library XML file" format</h3>

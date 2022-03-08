@@ -1,0 +1,81 @@
+title: Atomes documentation
+lang: en
+description: This site presents the documentation for the Atomes program
+
+#incremental: false
+
+markdown: kramdown
+
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+markdown_extensions:
+  - toc:
+    permalink: "#"
+    baselevel: 6
+    #  - pymdownx.arithmatex:
+    #    generic: true
+    #  - markdown_katex:
+    #    no_inline_svg: True
+    #    insert_fonts_css: True
+
+    #extra_javascript:
+    #  - javascripts/mathjax.js
+    #  - https://polyfill.io/v3/polyfill.min.js?features=es6
+    #  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+banner: "/assets/img/banner.png"
+favicon: "/assets/img/favicon.ico"
+
+remote_theme: rundocs/jekyll-rtd-theme
+
+readme_index:
+  with_frontmatter: true
+
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - jekyll-scholar
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+
+scholar:
+  locale: en
+  source: ./_bibliography
+  style: _bibliography/my-ieee.cls
+  bibliography: references.bib
+# TODO need to figure out how to add prefix here
+  bibliography_template: ""
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: false
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+#  details_permalink: "/notes-jekyll/:details_dir/:key:extension"
+# Ensure that details are not printed twice
+  query: "@*"
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
