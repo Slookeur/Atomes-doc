@@ -1,7 +1,7 @@
 # Atomes: Documentation
 
-![](https://github.com/atomes/atomes-doc.io/workflows/ns/badge.svg)
-![](https://www.codefactor.io/repository/github/atomes/atomes-doc/badge)
+![](https://github.com/Slookeur/Atomes-doc.io/workflows/ns/badge.svg)
+![](https://www.codefactor.io/repository/github/Atomes/Atomes-doc/badge)
 
 ***Atomes*** is developped by [Dr. Sébastien Le Roux][slr], research engineer for the [CNRS][cnrs]
 
