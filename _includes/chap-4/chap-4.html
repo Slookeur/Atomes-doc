@@ -1,0 +1,27 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p><span id="ana" label="ana"></span></p>
+<p>In this chapter examples will be illustrated using an <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace presented in figure <a href="#lGeSe" data-reference-type="ref" data-reference="lGeSe">4.1</a>, this workspace contains 3 different projects, liquid GeSe systems with a similar chemistry yet obtained using a different set of DFT-GGA functionals. {% cite Jcp.138.174505 %}<br />
+</p>
+<div id="lGeSe">
+<div align="center">
+<figure>
+<img src="/img/curves/lGeSe.png" id="lGeSe" style="width:18cm" alt="Example workspace to illustrate the analysis capabilities of the Atomes programs containing 3 projects, named &quot;l-GeSe [BLYP]&quot;, &quot;l-GeSe [PBE]&quot; and &quot;l-GeSe [PW91]&quot;." />
+<figcaption aria-hidden="true"><strong><span>Figure 4.1:</span></strong> Example workspace to illustrate the analysis capabilities of the <span><em><span><strong><span>Atomes</span></strong></span></em></span> programs containing 3 projects, named "<span><code>l-GeSe [BLYP]</code></span>", "<span><code>l-GeSe [PBE]</code></span>" and "<span><code>l-GeSe [PW91]</code></span>".</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+When a project is opened in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace, and if this project is the <span><em><span><strong><span>active</span></strong></span></em></span> project, then it it possible to compute the properties presented in section <a href="/chap-3/section-4/" data-reference-type="ref" data-reference="calc">3.4</a>, and the parameter(s) of the calculation(s) can be adjusted via the associated dialog boxes accessible by using the "<span><code>Analyze</code></span>" menu [Fig. <a href="/chap-3/section-1#main" data-reference-type="ref" data-reference="main">3.1</a>-d].<br />
+Some of the calculations of the "<span><code>Analyze menu</code></span>" are immediately available when a project is opened, other require some condition(s) to be full-filled before being accessible:</p>
+<ol>
+<li><p><span id="1" label="1"></span> g(r)/G(r): requires a model box to be described.</p></li>
+<li><p><span id="2" label="2"></span> S(q) from FFT[g(r)]: requires <a href="#1" data-reference-type="ref" data-reference="1">[1]</a> to be completed.</p></li>
+<li><p><span id="3" label="3"></span> S(q) from Debye equation: requires a model box to be described.</p></li>
+<li><p><span id="4" label="4"></span> g(r)/G(r) from FFT[S(q)]: requires <a href="#3" data-reference-type="ref" data-reference="3">[3]</a> to be completed.</p></li>
+<li><p><span id="5" label="5"></span> Bonds and angles: no conditions.</p></li>
+<li><p><span id="6" label="6"></span> Ring statistics: no conditions.</p></li>
+<li><p><span id="7" label="7"></span> Chain statistics: no conditions.</p></li>
+<li><p><span id="8" label="8"></span> Spherical harmonics: requires <a href="#5" data-reference-type="ref" data-reference="5">[5]</a> to be completed.</p></li>
+<li><p><span id="9" label="9"></span> Mean Squared Displacement: requires the project have more than 1 configuration (MD trajectory).</p></li>
+</ol>

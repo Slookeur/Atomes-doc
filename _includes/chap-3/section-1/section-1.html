@@ -1,0 +1,41 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<div id="main">
+<div align="center">
+<figure>
+<img src="/img/main/atomes-main-w.png" id="main" style="width:15cm" alt="Main window of the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 3.1:</span></strong> Main window of the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>The main interface of the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program [Fig. <a href="/chap-3/section-1#main" data-reference-type="ref" data-reference="main">3.1</a>-a] gives access to:</p>
+<ul>
+<li><p>The "<span><code>Workspace menu</code></span>" [Fig. <a href="/chap-3/section-1#main" data-reference-type="ref" data-reference="main">3.1</a>-b] to open and save files, including <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace and project files.</p></li>
+<li><p>The "<span><code>Edit menu</code></span>" [Fig. <a href="/chap-3/section-1#main" data-reference-type="ref" data-reference="main">3.1</a>-c] to adjust chemical / physical of a system to be studied/edited.</p></li>
+<li><p>The "<span><code>Compute menu</code></span>" [Fig.  <a href="/chap-3/section-1#main" data-reference-type="ref" data-reference="main">3.1</a>-d] to run some analysis on the <span><em><span><strong><span>active</span></strong></span></em></span> project (see section <a href="/chap-3/section-4/" data-reference-type="ref" data-reference="calc">3.4</a> for details).</p></li>
+<li><p>The "<span><code>Help menu</code></span>" [Fig. <a href="/chap-3/section-1#main" data-reference-type="ref" data-reference="main">3.1</a>-e] to access the documentation and a periodic table.</p></li>
+</ul>
+<p><span><em><span><strong><span>Atomes</span></strong></span></em></span> allows to build, edit, study, analyse and compare multiple systems within the same instance of the program. Each system (molecule(s)/material ...) is defined in a data structure called <span><strong><span>project</span></strong></span>, <span><em><span><strong><span>Atomes</span></strong></span></em></span> projects (*.apf files) can be opened/saved separately, the list of opened project(s) appears in the left side of the main window in a browsable tree-like structure. The entire list of project(s) displayed in this part of the main window is a data structure called <span><strong><span>workspace</span></strong></span>, and <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace files (*.awf files) can also be opened and saved, allowing to back up the entire list of projects at once, preserving the possible connections, data exchanges, between each projects.<br />
+An illustration is presented in figure <a href="/chap-1#overview" data-reference-type="ref" data-reference="overview">1.1</a>, many different projects being opened in the workspace. To each of these project is assigned an OpenGL 3D window, few of them being visible in figure <a href="/chap-1#overview" data-reference-type="ref" data-reference="overview">1.1</a>. Double-clicking on the "<span><code>Workspace</code></span>" word at the top root of the tree, the list of all projects appears in the right side window. This list includes, in bold green font, the name of the <span><em><span><strong><span>active</span></strong></span></em></span> project (see section <a href="/chap-3/section-4/" data-reference-type="ref" data-reference="calc">3.4</a> for details).</p>
+<h4 class="unnumbered" id="keyboard-shortcuts">Keyboard shortcuts</h4>
+<ul>
+<li><p>Workspace:</p>
+<ul>
+<li><p><kbd>Ctrl</kbd>+ <kbd>w</kbd> : open workspace</p></li>
+<li><p><kbd>Ctrl</kbd>+ <kbd>s</kbd> : save workspace as</p></li>
+<li><p><kbd>Ctrl</kbd>+ <kbd>c</kbd> : close workspace<br />
+</p></li>
+</ul></li>
+<li><p>Project:</p>
+<ul>
+<li><p><kbd>Ctrl</kbd>+ <kbd>n</kbd> : create new project</p></li>
+<li><p><kbd>Ctrl</kbd>+ <kbd>o</kbd> : open project</p></li>
+</ul></li>
+<li><p>Misc:</p>
+<ul>
+<li><p><kbd>Ctrl</kbd>+ <kbd>t</kbd> : show curve toolboxes</p></li>
+<li><p><kbd>Ctrl</kbd>+ <kbd>p</kbd> : open periodic table</p></li>
+<li><p><kbd>Ctrl</kbd>+ <kbd>a</kbd> : show about dialog</p></li>
+<li><p><kbd>Ctrl</kbd>+ <kbd>q</kbd> : quit</p></li>
+</ul></li>
+</ul>

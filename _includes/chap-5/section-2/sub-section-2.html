@@ -1,0 +1,105 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p>Pressed over an atom or a bond the right button opens the object contextual menu:</p>
+<div id="mocm">
+<div align="center">
+<figure>
+<img src="/img/visu/ocm/ocm-w.png" id="mocm" style="width:13cm" alt="The object contextual menu: a) for an atom, b) for a chemical bond." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.19:</span></strong> The object contextual menu: <span><strong><span>a)</span></strong></span> for an atom, <span><strong><span>b)</span></strong></span> for a chemical bond.</figcaption>
+<br /></figure>
+</div>
+</div>
+<ul>
+<li><p>Over <span><em><span>An atom</span></em></span>: the menu in figure <a href="#mocm" data-reference-type="ref" data-reference="mocm">5.19</a>-a) is displayed, the top part provides several information (when available) related to the atom:</p>
+<ul>
+<li><p>The atom id: chemical species and id number in the project</p></li>
+<li><p>The atom coordinates</p></li>
+<li><p>Total coordination of the atom</p></li>
+<li><p>Partial coordination of the atom</p></li>
+<li><p>Fragment and molecule id the atom belongs to</p></li>
+</ul></li>
+<li><p>Over <span><em><span>A chemical bond</span></em></span>: the menu in figure <a href="#mocm" data-reference-type="ref" data-reference="mocm">5.19</a>-b) is displayed, the top part provides several information (when available) related to the bond:</p>
+<ul>
+<li><p>The atoms involved in the bond</p></li>
+<li><p>The bond length</p></li>
+<li><p>Fragment and molecule id the bond belongs to</p></li>
+</ul></li>
+</ul>
+<p>The bottom parts of the object contextual menus in figure <a href="#mocm" data-reference-type="ref" data-reference="mocm">5.19</a> are almost identical, and contain a list of submenus dedicated to several actions that could be performed in relation to the object, atom or chemical bond, of the contextual menu. The construction of each submenu follow a similar pattern presented bellow.</p>
+<h5 class="unnumbered" id="mocmcons">Construction of the submenus</h5>
+<div id="mocmb">
+<div align="center">
+<figure>
+<img src="/img/visu/ocm/ocm-sub-w.png" id="mocmb" style="width:13cm" alt="Construction of the submenus attached to the object contextual menu." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.20:</span></strong> Construction of the submenus attached to the object contextual menu.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>If the action proposed by the submenu can be applied to this atom/bond then the first element of the menu is a line with the name of this atom/bond [Fig. <a href="#mocmb" data-reference-type="ref" data-reference="mocmb">5.20</a>-a]. The second line [Fig. <a href="#mocmb" data-reference-type="ref" data-reference="mocmb">5.20</a>-b] refers, depending on the action of the submenu and/or the status of the atom, to "<span><code>selected</code></span>" or "<span><code>non-selected</code></span>" atoms. The third line [Fig. <a href="#mocmb" data-reference-type="ref" data-reference="mocmb">5.20</a>-c] follows the same idea for the "<span><code>labelled</code></span>" or "<span><code>non-labelled</code></span>" atoms. Finally the bottom part [Fig. <a href="#mocmb" data-reference-type="ref" data-reference="mocmb">5.20</a>-c] refers to the coordinations and the chemistry of the considered object.<br />
+Most of the actions provided by these submenus being very intuitive, only the "<span><code>Style</code></span>" and "<span><code>Edit as new project</code></span>" menus will be introduced in detail thereafter.</p>
+<h5 id="mstyle">The "<span><code>Style</code></span>" submenu</h5>
+<p>The "<span><code>Style</code></span>" submenu(s) of the object contextual menu allows to change the visual style locally, ie. for an atom/bond, or any particular set of atom and bonds in the model.<br />
+</p>
+<div id="ocms">
+<div align="center">
+<figure>
+<img src="/img/visu/ocm/ocm-style.png" id="ocms" style="width:15cm" alt="The object contextual menu and the &quot;Style&quot; submenu(s)." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.21:</span></strong> The object contextual menu and the "<span><code>Style</code></span>" submenu(s).</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+Overall using local style(s) allows to improve the visual representation and to highlights particular element(s) [Fig. <a href="#exstyles" data-reference-type="ref" data-reference="exstyles">5.22</a>].<br />
+</p>
+<div id="exstyles">
+<div align="center">
+<figure>
+<img src="/img/visu/ocm/ex-styles2.png" id="exstyles" style="width:15cm" alt="Multiple visual styles the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.22:</span></strong> Multiple visual styles the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>The parameters of the local style(s), are inherited from the global style (see section <a href="/chap-5/section-1/sub-section-1#stylem" data-reference-type="ref" data-reference="stylem">5.1.1.1</a>). Therefore in order to modify any parameters of a particular style, ie. the sphere radius of an atom for the "<span><code>Ball and stick</code></span>" style, this style must be applied globally, and the appropriate parameters modified using the "<span><code>model</code></span>" menu (see section <a href="/chap-5/section-1/sub-section-2" data-reference-type="ref" data-reference="modelm">5.1.2</a>) or the "<span><code>Atom(s) configuration</code></span>" dialog (Fig. <a href="/chap-5/section-1/sub-section-2#advats" data-reference-type="ref" data-reference="advats">5.6</a>). Afterwards and when applied locally the "<span><code>Ball and stick</code></span>" style will use the new parameters. Note that the default atomic radius for the "<span><code>Spacefilled</code></span>" style, even is this style is not used, is the "<span><code>Covalent</code></span>" radius, following the local style menu’s behavior and if the global "<span><code>Spacefilled</code></span>" style was not changed, then the local "<span><code>Spacefilled</code></span>" style(s) will use the same parameters.</p>
+<h5 id="the-copy-submenu">The "<span><code>Copy</code></span>" submenu</h5>
+<p>The "<span><code>Copy</code></span>" submenu(s) of the object contextual menu allows to copy atomic coordinates, the copied data could then be re-used either using the "<span><code>Model edition</code></span>" dialog (see section <a href="/chap-6/section-1/sub-section-3" data-reference-type="ref" data-reference="medial">6.1.3</a>) or the mouse "<span><code>Edition mode</code></span>" (see section <a href="/chap-6/section-2/" data-reference-type="ref" data-reference="mouseedit">6.2</a>).</p>
+<div id="ocmc">
+<div align="center">
+<figure>
+<img src="/img/visu/ocm/ocm-copy.png" id="ocmc" style="width:15cm" alt="The object contextual menu and the &quot;Copy&quot; submenu(s)." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.23:</span></strong> The object contextual menu and the "<span><code>Copy</code></span>" submenu(s).</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+Data can copied from any project, even from an MD trajectory however in that case only the atomic coordinates from the visible MD step will be copied, other will be ignored. Data can only be pasted in project(s) that support the "<span><code>Edition mode</code></span>" (see chapter <a href="/chap-6/" data-reference-type="ref" data-reference="edition">6</a>).</p>
+<h5 id="meditnewp">The "<span><code>Edit as new project</code></span>" submenu</h5>
+<p>The "<span><code>Edit as new project</code></span>" submenu(s) of the object contextual menu allows to create a new project using any particular set of atom and bonds in the model.</p>
+<div id="ocme">
+<div align="center">
+<figure>
+<img src="/img/visu/ocm/ocm-edit.png" id="ocme" style="width:15cm" alt="The object contextual menu and the &quot;Edit as new project&quot; submenu(s)." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.24:</span></strong> The object contextual menu and the "<span><code>Edit as new project</code></span>" submenu(s).</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>Using any button of this menu the corresponding set of atom(s)/bond(s) will be copied and exported as a new <span><em><span><strong><span>Atomes</span></strong></span></em></span> project. This new project will immediately be inserted in the workspace tree to be available for further work and a corresponding 3D window will pop-up. Parameters of the initial project will be applied to the new one (style, colors ...), except for the periodicity, if any, that will be lost in the process.<br />
+<br />
+An example is proposed thereafter:<br />
+</p>
+<ol>
+<li><p>For this example the King’s rings statistics analysis (see section <a href="/appendix/app-4/section-5/" data-reference-type="ref" data-reference="rstat">4.5</a>) was performed on SiO<span class="math inline">\(_2\)</span> test system, afterwards the "<span><code>Advanced environment</code></span>" dialog was opened and all atom(s) involved in ring(s) of size 6 atoms were selected (selection is highlighted in light blue):</p>
+<div align="center">
+<p><img src="/img/visu/ocm/edit-1.png" style="width:16cm" alt="image" /></p>
+</div></li>
+<li><p>After the selection, the object contextual menu is used to "<span><code>Edit as new project</code></span>" the list of "<span><code>All selected atom(s)/bond(s)</code></span>":</p>
+<div align="center">
+<p><img src="/img/visu/ocm/edit-2.png" style="width:16cm" alt="image" /></p>
+</div></li>
+<li><p>The new project "<span><code>Project N°4</code></span>" that contains the appropriate atom(s)/bond(s) is created and inserted in the workspace tree, and the new OpenGL window pops up:</p>
+<div align="center">
+<p><img src="/img/visu/ocm/edit-3.png" style="width:16cm" alt="image" /></p>
+</div></li>
+<li><p>Finally after restoring the periodicity, it is possible to calculate any other properties for the new model, ie. the selection from the SiO<span class="math inline">\(_2\)</span> model, and compare the results with one for the original system:</p>
+<div align="center">
+<p><img src="/img/visu/ocm/edit-4.png" style="width:16cm" alt="image" /></p>
+</div></li>

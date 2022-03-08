@@ -1,0 +1,316 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p>The "<span><code>Crystal builder</code></span>" button [Fig. <a href="#crdw" data-reference-type="ref" data-reference="crdw">6.2</a>] allows to open the corresponding window.<br />
+</p>
+<div id="crdw">
+<div align="center">
+<figure>
+<img src="/img/edit/builder-m.png" id="crdw" style="width:11cm" alt="Accessing the &quot;Crystal builder&quot; window in the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 6.2:</span></strong> Accessing the "<span><code>Crystal builder</code></span>" window in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<div id="crwin">
+<div align="center">
+<figure>
+<img src="/img/edit/builder/builder.png" id="crwin" style="width:17.5cm" alt="The &quot;Crystal builder&quot; window in the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 6.3:</span></strong> The "<span><code>Crystal builder</code></span>" window in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>The "<span><code>Crystal builder</code></span>" window [Fig. <a href="#crwin" data-reference-type="ref" data-reference="crwin">6.3</a>] allows the creation of crystalline structure(s) and super-structure(s). Thus not only atom(s) but also molecules can be inserted to the crystalline positions defined by the space group.<br />
+The "<span><code>Select ...</code></span>" menu allows in insert objects: atoms, molecules, and atom selections from any other project opened in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace. It will be presented in details in section <a href="/chap-6/section-1/sub-section-3#replsel" data-reference-type="ref" data-reference="replsel">6.1.3.4</a>, at the exception of the "<span><code>Empty site</code></span>" button unique to the "<span><code>Crystal builder</code></span>" and that will be introduced in the next pages related to the occupancy.<br />
+Each object will be inserted at the position specified using the fractional coordinates, in the proportion of the occupancy, and following the rules of the selected space group. The following parameters can be adjusted:</p>
+<ol>
+<li><p><span id="cs" label="cs"></span> The crystal system:<br />
+</p>
+<ul>
+<li><p>Triclinic</p></li>
+<li><p>Monoclinic</p></li>
+</ul>
+<ul>
+<li><p>Orthorhombic</p></li>
+<li><p>Tetragonal</p></li>
+</ul>
+<ul>
+<li><p>Trigonal</p></li>
+<li><p>Hexagonal</p></li>
+</ul>
+<ul>
+<li><p>Cubic</p></li>
+</ul></li>
+<li><p><span id="bv" label="bv"></span> The type of Bravais lattice, depending on <a href="#cs" data-reference-type="ref" data-reference="cs">[cs]</a>, among:<br />
+</p>
+<ul>
+<li><p>Primitive</p></li>
+<li><p>Base-centered</p></li>
+</ul>
+<ul>
+<li><p>Body-centered</p></li>
+<li><p>Face-centered</p></li>
+</ul>
+<ul>
+<li><p>Hexagonal axes</p></li>
+<li><p>Rhombohedral axes</p></li>
+</ul></li>
+<li><p><span id="sp" label="sp"></span> The space group, from 230 groups of the International tables for Crystallography Vol. A, {% cite IucrA %} and filtered using <a href="#cs" data-reference-type="ref" data-reference="cs">[cs]</a> and <a href="#bv" data-reference-type="ref" data-reference="bv">[bv]</a></p></li>
+<li><p><span id="sps" label="sps"></span> The space group setting, if more than one is available.</p></li>
+<li><p><span id="lp" label="lp"></span> The format of the lattice parameters:</p>
+<ul>
+<li><p><span><strong><span><em>a</em></span></strong></span>, <span><strong><span><em>b</em></span></strong></span>, <span><strong><span><em>c</em></span></strong></span> and <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span></p></li>
+<li><p>Vector components: <span><em><span>a</span></em></span>(x,y,z), <span><em><span>b</span></em></span>(x,y,z), <span><em><span>c</span></em></span>(x,y,z)</p></li>
+</ul></li>
+<li><p>The number of cell(s) to replicate on <span><strong><span><em>a</em></span></strong></span>, <span><strong><span><em>b</em></span></strong></span> and <span><strong><span><em>c</em></span></strong></span> to create the final supercell.</p></li>
+<li><p>The object to insert to build the crystal using information specified at steps <a href="#cs" data-reference-type="ref" data-reference="cs">[cs]</a>, <a href="#bv" data-reference-type="ref" data-reference="bv">[bv]</a>, <a href="#sp" data-reference-type="ref" data-reference="sp">[sp]</a>, <a href="#sps" data-reference-type="ref" data-reference="sps">[sps]</a> and <a href="#lp" data-reference-type="ref" data-reference="lp">[lp]</a>, including the following options:</p>
+<ul>
+<li><p>The type of object (atom, molecule ...)</p></li>
+<li><p>The fractional coordinates of the object</p></li>
+<li><p>The occupancy of the crystallographic site (between 0.0 and 1.0)</p></li>
+<li><p>How to handle occupancy (if &lt; 1.0), object(s) and/or empty position(s):</p>
+<ul>
+<li><p>"<span><code>Random for the initial cell only</code></span>": sites are filled randomly in the initial cell only, then the initial cell is simply replicated.</p></li>
+<li><p>"<span><code>Random cell by cell</code></span>": sites are filled randomly for each cell, cell by cell separately.</p></li>
+<li><p>"<span><code>Completely random</code></span>": sites are filled randomly for the entire network, the final crystal is considered as whole.</p></li>
+<li><p>"<span><code>Successively</code></span>": sites are filled successively, all object(s) A are inserted (for the first <span class="math inline">\(n(A)\)</span> positions), then all object(s) B are inserted (for the next <span class="math inline">\(n(B)\)</span> positions) ...</p></li>
+<li><p>"<span><code>Alternatively</code></span>": sites are filled alternatively: object A is inserted on the first position, object B is inserted on the second position, object A on the third position, object B on the fourth position ... and so on.</p></li>
+</ul>
+<p>In any case the number <span class="math inline">\(n(A)\)</span> of object(s) A to be inserted in calculated using: <span class="math display">\[n(A) = NP \times occ(A) \nonumber\]</span> <span class="math inline">\(NP\)</span> is the number of position(s) to fill, <span class="math inline">\(occ(A)\)</span> is the occupancy for object A.<br />
+<u>Overlapping</u>, object(s) on the same position, can also be allowed, the concept will be illustrated in the following examples.</p></li>
+</ul></li>
+</ol>
+<h5 class="unnumbered" id="using-the-crystal-builder-space-group-information">Using the crystal builder: space group information</h5>
+<p>Once a space group has been selected it is possible to access the "<span><code>Space group info</code></span>" dialog using the "<span><code>group info</code></span>" button:</p>
+<div id="crinfo">
+<div align="center">
+<figure>
+<img src="/img/edit/builder/info.png" id="crinfo" style="width:17cm" alt="The &quot;space group info&quot; dialog for the R\bar{3}c group in the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 6.4:</span></strong> The "<span><code>space group info</code></span>" dialog for the <span><strong><span>R<span class="math inline">\(\bar{3}\)</span>c</span></strong></span> group in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+The main information available is presented in the "<span><code>space group info</code></span>" dialog [Fig. <a href="#crinfo" data-reference-type="ref" data-reference="crinfo">6.4</a>], including the different setting(s), and the corresponding initial coordinates and Wyckoff positions.</p>
+<h5 class="unnumbered" id="using-the-crystal-builder-building-crystals">Using the crystal builder: building crystal(s)</h5>
+<p>The following pages will present crystal building examples using the <span><strong><span>Fd<span class="math inline">\(\bar{3}\)</span>m</span></strong></span> (origin 1 setting) space group (diamond-like structure):<br />
+</p>
+<ol>
+<li><p><span id="cd1" label="cd1"></span> <span><strong><span><em>The C-diamond structure</em></span></strong></span>:</p>
+<div id="diaminit">
+<div align="center">
+<figure>
+<img src="/img/edit/builder/diam-init.png" id="diaminit" style="width:17cm" alt="Building a C-diamond crystal in the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 6.5:</span></strong> Building a C-diamond crystal in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+The following steps are required to build the C-diamond crystalline structure (see figure <a href="#diaminit" data-reference-type="ref" data-reference="diaminit">6.5</a>-left):</p>
+<ul>
+<li><p>Select the <span><strong><span>Fd<span class="math inline">\(\bar{3}\)</span>m</span></strong></span> space group ("<span><code>Cubic -&gt; Face-centered -&gt; 227: Fd-3m</code></span>")</p></li>
+<li><p>Set the value for the lattice parameter: <span class="math inline">\(\simeq\)</span> 3.5 Å</p></li>
+<li><p>Insert a C atom at (0.0, 0.0, 0.0) with occupancy to 1.0, you can edit both coordinates and occupancy by double-clicking on the corresponding line.</p></li>
+<li><p>Select the "<span><code>Insert check button</code></span>" to use the atom to build the crystal, or alternatively click to top of the "Insert" column to insert all elements.</p></li>
+<li><p>Finally simply click on the "<span><code>Build / Build (new project)</code></span>" button.</p></li>
+</ul>
+<p>The crystal is then displayed (see figure <a href="#diaminit" data-reference-type="ref" data-reference="diaminit">6.5</a>-right), also clones (atoms linked using the PBC see section <a href="/chap-5/section-1/sub-section-2#Clones" data-reference-type="ref" data-reference="Clones">5.1.2.3</a>) are immediately shown. The existence of a chemical bond depending on the cutoff(s), determined automatically when creating the crystal, you might need to adjust the values to define properly the bonding of the system.<br />
+</p></li>
+<li><p><span><strong><span><em>The C-diamond structure, playing with occupancy</em></span></strong></span>:<br />
+In these examples the parameters to build the crystal remain exactly similar to <a href="#cd1" data-reference-type="ref" data-reference="cd1">[cd1]</a>, only the total number of cell will be increased to 2 on <span><strong><span><em>a</em></span></strong></span>:</p>
+<div align="center">
+<p><img src="/img/edit/builder/diam2cells.png" style="width:8cm" alt="image" /></p>
+</div>
+<ul>
+<li><p>Occupancy = 1.0:<br />
+</p>
+<div align="center">
+<p><img src="/img/edit/builder/diam2a.png" style="width:6cm" alt="image" /></p>
+</div>
+<p>With 8 atoms per cell, the total number of atoms in the system is equal to 16.</p></li>
+<li><p>Occupancy = 0.5:<br />
+</p>
+<p><img src="/img/edit/builder/occup.png" style="width:17cm" alt="image" /><br />
+With an occupancy of 0.5 the number of atoms per cell will be reduced to 4,<br />
+and the total number of atoms in the system to 8.</p>
+<p><br />
+</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(1)</td>
+<td style="text-align: left;"><img src="/img/edit/builder/occ-1.png" style="width:6cm" alt="image" /></td>
+<td style="text-align: left;"><span class="math inline">\(\Longrightarrow\)</span></td>
+<td style="text-align: left;"><img src="/img/edit/builder/diam2a-1.png" style="width:6cm" alt="image" /></td>
+</tr>
+</tbody>
+</table>
+<p>"<span><code>Random for the initial cell only</code></span>":<br />
+The same treatment is applied to each cell, inducing an overall symmetry.<br />
+The system is not disordered with 4 atoms per cell at the exact same positions.<br />
+</p>
+<p><br />
+</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(2)</td>
+<td style="text-align: left;"><img src="/img/edit/builder/occ-2.png" style="width:6cm" alt="image" /></td>
+<td style="text-align: left;"><span class="math inline">\(\Longrightarrow\)</span></td>
+<td style="text-align: left;"><img src="/img/edit/builder/diam2a-2.png" style="width:6cm" alt="image" /></td>
+</tr>
+</tbody>
+</table>
+<p>"<span><code>Random cell by cell</code></span>":<br />
+A random treatment is applied to each cell independently.<br />
+The system is disordered, but the number of atoms per cell remains equal to 4.<br />
+</p>
+<p><br />
+</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(3)</td>
+<td style="text-align: left;"><img src="/img/edit/builder/occ-3.png" style="width:6cm" alt="image" /></td>
+<td style="text-align: left;"><span class="math inline">\(\Longrightarrow\)</span></td>
+<td style="text-align: left;"><img src="/img/edit/builder/diam2a-3.png" style="width:6cm" alt="image" /></td>
+</tr>
+</tbody>
+</table>
+<p>"<span><code>Completely random</code></span>":<br />
+The system is entirely disordered.<br />
+The average value 0.5 C atoms per site is respected for the entire structure,<br />
+but the number of atom(s) per cell can change.<br />
+This option if particularly useful when the occupancy for a particular site is very low, see the section remarks afterwards for more information.</p>
+<p><br />
+To illustrate (4) "<span><code>Successively</code></span>" and (5) "<span><code>Alternatively</code></span>" it is interesting to use more than one chemical species:<br />
+</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adding O atoms:</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Adding O and N atoms:</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">For all chemical species:</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">For all chemical species:</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">- The occupancy is equal to 0.5</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">- The occupancy is equal 0.333</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">- The site is the same (0.0, 0.0, 0.0)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">- The site is the same (0.0, 0.0, 0.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\Downarrow\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(\Downarrow\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><img src="/img/edit/builder/diam2cells2.png" style="width:8cm" alt="image" /></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><img src="/img/edit/builder/diam2cells3.png" style="width:8cm" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\Downarrow\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(\Downarrow\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><img src="/img/edit/builder/occ-4.png" style="width:6cm" alt="image" /></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><img src="/img/edit/builder/diam2a-4.png" style="width:6cm" alt="image" /></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><img src="/img/edit/builder/diam2a-43.png" style="width:6cm" alt="image" /></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><img src="/img/edit/builder/occ-5.png" style="width:6cm" alt="image" /></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><img src="/img/edit/builder/diam2a-5.png" style="width:6cm" alt="image" /></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><img src="/img/edit/builder/diam2a-53.png" style="width:6cm" alt="image" /></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+In both cases (4) "<span><code>Successively</code></span>" and (5) "<span><code>Alternatively</code></span>":<br />
+The system is ordered.<br />
+The average values of the occupancy per site are respected for the entire structure.</p></li>
+<li><p><span><strong><span><em>The C-diamond structure, playing with molecules</em></span></strong></span>:<br />
+As already mentioned <span><em><span><strong><span>Atomes</span></strong></span></em></span> does not only allow to build atomic crystalline structures but also molecular crystalline super-structures.</p>
+<div id="c60build">
+<div align="center">
+<figure>
+<img src="/img/edit/builder/build-c60.png" id="c60build" style="width:16cm" alt="Building a C-diamond like C_{60} crystalline super-structure." />
+<figcaption aria-hidden="true"><strong><span>Figure 6.6:</span></strong> Building a C-diamond like C<span class="math inline">\(_{60}\)</span> crystalline super-structure.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>The "<span><code>Insert...</code></span>" menu allows indeed to insert fragments from the library of from any project opened in the workspace.<br />
+Using C<span class="math inline">\(_{60}\)</span> fullerene molecules instead of carbon atoms (and increasing the lattice parameter appropriately) allows to obtain the structure illustrated in figure <a href="#c60build" data-reference-type="ref" data-reference="c60build">6.6</a>.<br />
+As for the atom(s) tweaking the occupancy can be useful with molecules:</p>
+<div align="center">
+<p><img src="/img/edit/builder/diam2cells2mols.png" style="width:8cm" alt="image" /></p>
+</div>
+<p>Using the (4) "<span><code>Successively</code></span>" occupancy set-up, you build:</p>
+<div id="c60-tol">
+<div align="center">
+<figure>
+<img src="/img/edit/builder/c60-tol.png" id="c60-tol" style="width:11cm" alt="Building a C-diamond like, alternating C_{60} and toluene molecules, crystalline super-structure." />
+<figcaption aria-hidden="true"><strong><span>Figure 6.7:</span></strong> Building a C-diamond like, alternating C<span class="math inline">\(_{60}\)</span> and toluene molecules, crystalline super-structure.</figcaption>
+<br /></figure>
+</div>
+</div></li>
+<li><p><span><strong><span><em>The C-diamond structure, molecules and overlapping</em></span></strong></span>:<br />
+As mentioned using the "<span><code>Allow overlapping</code></span>" option allows to insert at the same crystalline positions. The interest is limited to molecules-molecules overlapping or molecules-atoms overlapping, there is no point in getting two atoms at the same position. The idea behind this concept is to allows the encapsulation of an object by another one:</p>
+<div id="c240b">
+<div align="center">
+<figure>
+<img src="/img/edit/builder/build-c240.png" id="c240b" style="width:16cm" alt="Building a C-diamond like, toluene encapsulated C_{240}, crystalline super-structure. The &quot;Molecules&quot; color-map (see sec. 5.1.1.2) for atoms and bonds is used for clarity purposes." />
+<figcaption aria-hidden="true"><strong><span>Figure 6.8:</span></strong> Building a C-diamond like, toluene encapsulated C<span class="math inline">\(_{240}\)</span>, crystalline super-structure. The "<span><code>Molecules</code></span>" color-map (see sec. <a href="/chap-5/section-1/sub-section-1#csm" data-reference-type="ref" data-reference="csm">5.1.1.2</a>) for atoms and bonds is used for clarity purposes.</figcaption>
+<br /></figure>
+</div>
+</div></li>
+</ul></li>
+</ol>
+<ul>
+<li><p><u>Crystal building</u>: for more on the crystal building process see appendix <a href="/appendix/app-3/" data-reference-type="ref" data-reference="cbp">3</a>.<br />
+Here are some important things happening when building a crystal in <span><em><span><strong><span>Atomes</span></strong></span></em></span>:</p>
+<ul>
+<li><p>At the beginning of the process the size of the object(s) to insert is compared to the lattice parameters, if the lattice parameters are considered too small a warning message will pop-up:</p>
+<ul>
+<li><p>For an atom, the size is set to 1.0 Å.</p></li>
+<li><p>For a molecule, the size is the maximum interatomic distance within the molecule.</p></li>
+</ul>
+<p>The process is not fail-safe, and without being careful it is possible to build a crystal with an improper bonding.<br />
+The distance matrix calculation to determine bonding information is performed on the fly at the end of the building process, if the crystal bonding is too bad, this calculation could fail and no bond will be display. If the crystalline structure is good, then simply correct the bond cutoff to perform the calculation again, and get the correct bonding information.</p></li>
+<li><p>At the end of the process all the atoms are wrapped back in the unit cell.</p></li>
+<li><p>The bond cutoff are determined automatically, therefore the visual aspect of the final structure might be misleading, with too much of too few bonds compared to what was expected.</p></li>
+<li><p>When inserting a molecule remember that there is not way to determine its orientation, with water molecules for instance it might be required to rotate the molecule(s) afterwards, see section <a href="/chap-6/section-1/sub-section-3" data-reference-type="ref" data-reference="medial">6.1.3</a> for more information.</p></li>
+</ul></li>
+<li><p><u>Occupancy</u>: as illustrated previously the order the object(s) is(are) inserted on the crystalline positions might have an importance on the final structure. This is true when the occupancy is &lt; 1.0 and / or when object can share the same site when using the "<span><code>Allow overlapping</code></span>" option.<br />
+To ensure that the desired crystal will be built, either insert the object in the proper order or re-order them using the mouse drag an drop:</p>
+<div align="center">
+<p><img src="/img/edit/builder/dnd.png" style="width:10cm" alt="image" /></p>
+</div>
+<p>The occupancy <span class="math inline">\(occ({\bf{\textit{s}}})\)</span> for a site <span><strong><span><em>s</em></span></strong></span> <span class="math inline">\((x_s, y_s, z_s)\)</span> is defined as: <span class="math display">\[occ({\bf{\textit{s}}}) = \sum_{i=1}^{N} occ(i)\]</span> for the <span class="math inline">\(N\)</span> object(s) on the same site <span class="math inline">\((x_s, y_s, z_s)\)</span></p></li>
+<li><p><u>Empty position</u>: the "<span><code>Empty position</code></span>" button of the "<span><code>Select ...</code></span>" menu is used to force the insertion of empty position(s).<br />
+The empty site(s) are always treated before any object insertion(s), even if the position in the insertion tree is not on top.<br />
+In the case of "<span><code>Overlapping</code></span>"+"<span><code>Empty position</code></span>" the rules for occupancy are modified as follow:<br />
+<span class="math display">\[occ({\bf{\textit{s}}}) = \max_{i=1}^{N} occ(i) + \sum_{j=1}^{E} occ(j) \\[0.25cm]\]</span> for the <span class="math inline">\(N\)</span> object(s) and <span class="math inline">\(E\)</span> empty positions on the same site <span class="math inline">\((x_s, y_s, z_s)\)</span>.</p></li>
+</ul>
