@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: /Atomes-doc/sitemap.xml
