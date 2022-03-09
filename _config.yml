@@ -1,7 +1,7 @@
 title: Atomes documentation
-baseurl: "/Atomes-doc/"
+baseurl: "/Atomes-doc"
 url: ""
-repository: Slookeur/Atomes-doc/
+repository: Slookeur/Atomes-doc
 lang: en
 description: This site presents the documentation for the Atomes program
 
