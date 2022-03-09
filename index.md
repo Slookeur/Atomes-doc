@@ -38,4 +38,4 @@ You can also check the ***Atomes*** tutorials:
 [jekyll]:https://jekyllrb.com/
 [atomes]:https://atomes.ipcms.fr/
 [atomes-doc]:/Atomes-doc/atomes-manual.pdf
-[atomes-tuto]:https://atomes.ipcms.fr/
+[atomes-tuto]:/Atomes-tuto
