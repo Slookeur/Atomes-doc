@@ -37,5 +37,5 @@ You can also check the ***Atomes*** tutorials:
 [github]:https://github.com/
 [jekyll]:https://jekyllrb.com/
 [atomes]:https://atomes.ipcms.fr/
-[atomes-doc]:/atomes-manual.pdf
+[atomes-doc]:/Atomes-doc/atomes-manual.pdf
 [atomes-tuto]:https://atomes.ipcms.fr/
