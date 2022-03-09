@@ -3,7 +3,7 @@
 <p>Neutron or X-ray scattering static structure factor <span class="math inline">\(S(q)\)</span> is defined as: <span class="math display">\[\label{s2q_1}
 S(q)=\frac{1}{N} \sum_{j,k} b_j\,b_k \left&lt; e^{\displaystyle{iq[{\bf{r}}_j-{\bf{r}}_k]}} \right&gt;\]</span> where <span class="math inline">\(b_j\)</span> and <span class="math inline">\({\bf{r}}_j\)</span> represent respectively the neutron or X-ray scattering length, and the position of the atom <span class="math inline">\(j\)</span>. <span class="math inline">\(N\)</span> is the total number of atoms in the system studied.<br />
 To take into account the inherent/volume averaging of scattering experiments it is necessary to sum all possible orientations of the wave vector <span class="math inline">\(q\)</span> compared to the vector <span class="math inline">\({\bf{r}}_j-{\bf{r}}_k\)</span>. This average on the orientations of the <span class="math inline">\(q\)</span> vector leads to the famous Debye’s equation: <span class="math display">\[\label{s2q_2}
-S(q)\ =\ \frac{1}{N} \sum_{j,k} b_j\,b_k \frac{\sin (q|{\bf{r}}_j-{\bf{r}}_k|)}{q|{\bf{r}}_j-{\bf{r}}_k|}\]</span> Nevertheless the instantaneous individual atomic contributions introduced by this equation <a href="#s2q_2" data-reference-type="ref" data-reference="s2q_2">[s2q_2]</a> are not easy to interpret. It is more interesting to express these contributions using the formalism of radial distribution functions [Sec. <a href="/appendix/app-4/section-2/" data-reference-type="ref" data-reference="rdf">4.2</a>].<br />
+S(q)\ =\ \frac{1}{N} \sum_{j,k} b_j\,b_k \frac{\sin (q|{\bf{r}}_j-{\bf{r}}_k|)}{q|{\bf{r}}_j-{\bf{r}}_k|}\]</span> Nevertheless the instantaneous individual atomic contributions introduced by this equation <a href="#s2q_2" data-reference-type="ref" data-reference="s2q_2">[s2q_2]</a> are not easy to interpret. It is more interesting to express these contributions using the formalism of radial distribution functions [Sec. <a href="/Atomes-doc/appendix/app-4/section-2/" data-reference-type="ref" data-reference="rdf">4.2</a>].<br />
 In order to achieve this goal it is first necessary to split the self-atomic contribution (<span class="math inline">\(j=k\)</span>), from the contribution between distinct atoms: <span class="math display">\[\label{s2q_3}
 	S(q)\ =\ \sum_{j}\ c_j b_j^2\ +\ \underbrace{\frac{1}{N} \sum_{j\ne k} b_j\,b_k \frac{\sin (q|{\bf{r}}_j-{\bf{r}}_k|)}{q|{\bf{r}}_j-{\bf{r}}_k|}}_{\displaystyle{I(q)}} \qquad \text{with}\quad c_j=\frac{N_j}{N}\]</span> where <span class="math inline">\(4\pi\ \sum_{j}\ c_j b_j^2\)</span> represents the total scattering cross section of the material.<br />
 The function <span class="math inline">\(I(q)\)</span> which describes the interaction between distinct atoms is related to the radial distribution functions through a Fourier transformation: <span class="math display">\[\label{s2q_4}
@@ -18,7 +18,7 @@ S(q)\ =\ 1\ +\ 4 \pi \rho \int_{0}^{\infty}\ dr\ r^{2}\ \frac{\sin qr}{qr} ({\bf
 <div id="sqsk">
 <div align="center">
 <figure>
-<img src="/img/phys/sqsk.png" id="sqsk" style="width:13cm" alt="Total neutron structure factor for glassy GeS_2 at 300 K - A Evaluation using the atomic correlations [Eq. [s2q_2]], B Evaluation using the pair correlation functions [Eq. [s2q_7]]." />
+<img src="/Atomes-doc/img/phys/sqsk.png" id="sqsk" style="width:13cm" alt="Total neutron structure factor for glassy GeS_2 at 300 K - A Evaluation using the atomic correlations [Eq. [s2q_2]], B Evaluation using the pair correlation functions [Eq. [s2q_7]]." />
 <figcaption aria-hidden="true"><strong><span>Figure 4.4:</span></strong> Total neutron structure factor for glassy GeS<span class="math inline">\(_2\)</span> at 300 K - <span><strong><span>A</span></strong></span> Evaluation using the atomic correlations [Eq. <a href="#s2q_2" data-reference-type="ref" data-reference="s2q_2">[s2q_2]</a>], <span><strong><span>B</span></strong></span> Evaluation using the pair correlation functions [Eq. <a href="#s2q_7" data-reference-type="ref" data-reference="s2q_7">[s2q_7]</a>].</figcaption>
 <br /></figure>
 </div>
@@ -37,7 +37,7 @@ This set of functions for a model of GeS<span class="math inline">\(_2\)</span>�
 <div id="GTDgr">
 <div align="center">
 <figure>
-<img src="/img/phys/GTDgr.png" id="GTDgr" style="width:11.5cm" alt="Example of various distribution functions neutron-weighted in glassy GeS_2 at 300 K." />
+<img src="/Atomes-doc/img/phys/GTDgr.png" id="GTDgr" style="width:11.5cm" alt="Example of various distribution functions neutron-weighted in glassy GeS_2 at 300 K." />
 <figcaption aria-hidden="true"><strong><span>Figure 4.5:</span></strong> Example of various distribution functions neutron-weighted in glassy GeS<span class="math inline">\(_2\)</span> at 300 K.</figcaption>
 <br /></figure>
 </div>
