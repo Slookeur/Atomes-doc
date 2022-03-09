@@ -12,7 +12,7 @@ Before going further it is strongly advised to read the DL-POLY user manual:<br 
 <br /></figure>
 </div>
 </div>
-<p>The mandatory first step in the <a href="https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx">DL-POLY</a> calculation assistant is to initialize the force field, as illustrated in figure <a href="#finit0" data-reference-type="ref" data-reference="finit0">7.1</a> it required to select both:</p>
+<p>The mandatory first step in the <a href="https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx">DL-POLY</a> calculation assistant is to initialize the force field, as illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#finit0" data-reference-type="ref" data-reference="finit0">7.1</a> it required to select both:</p>
 <ul>
 <li><p>The force field to be used, ie. the data source for many of the "<span><code>FIELD</code></span>" file parameters including: bonds, angles, dihedrals and inversions.<br />
 The <span><strong><span>FIELD</span></strong></span> file parameters can be imported from the following force fields:<br />
@@ -77,7 +77,7 @@ Theses parameters are read by <span><em><span><strong><span>Atomes</span></stron
 </div>
 <h5 id="the-control-file">The "<span><code>CONTROL</code></span>" file</h5>
 <p>When the force field has been initialized and providing the "<span><code>CONTROL</code></span>" file is to be prepared, it is possible to adjust the corresponding options.<br />
-These options are regrouped in 8 tabs illustrated in figure <a href="#fcontrol" data-reference-type="ref" data-reference="fcontrol">7.3</a>, and almost all options from the <a href="https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx">DL-POLY</a> user guide are available, with the exception of the Plumed calculation options and some options for the two-temperature "<span><code>ttm</code></span>" model.</p>
+These options are regrouped in 8 tabs illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#fcontrol" data-reference-type="ref" data-reference="fcontrol">7.3</a>, and almost all options from the <a href="https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx">DL-POLY</a> user guide are available, with the exception of the Plumed calculation options and some options for the two-temperature "<span><code>ttm</code></span>" model.</p>
 <div id="fcontrol">
 <div align="center">
 <figure>
@@ -109,7 +109,7 @@ For almost each and every intra or inter-molecular property listed in the corres
 Any objects selection is associated with a visualization in the model, ie. if an atom/a bond/an angle ... is selected then this object will be highlighted with a particular color in the 3D window, also the associated line in the selection dialog will be colored as well and using the same color.<br />
 Each page will be briefly introduced thereafter.</p>
 <h5 class="unnumbered" id="the-molecules-tab">The "<span><code>Molecule(s)</code></span>" tab</h5>
-<p>The "<span><code>Molecule(s)</code></span>" tab, see figure <a href="#molinit" data-reference-type="ref" data-reference="molinit">7.5</a>, lists all the different molecules in the model:<br />
+<p>The "<span><code>Molecule(s)</code></span>" tab, see figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#molinit" data-reference-type="ref" data-reference="molinit">7.5</a>, lists all the different molecules in the model:<br />
 </p>
 <div id="molinit">
 <div align="center">
@@ -131,7 +131,7 @@ Each page will be briefly introduced thereafter.</p>
 <li><p><span id="vizn" label="vizn"></span> Check button to visualize the atom number within the molecule</p></li>
 </ol>
 <p>In the "<span><code>Ni-Phth</code></span>" example used here, two distinct molecules are found, 8 identical and standard Ni-phthalocyanine molecules that constitute the bottom surface and 1 modified Ni-phthalocyanine molecule, with a H atom missing on top of it.<br />
-As illustrated in figure <a href="#ivizm" data-reference-type="ref" data-reference="ivizm">7.6</a> the effect of the first check button <a href="#vizm" data-reference-type="ref" data-reference="vizm">[vizm]</a> is to help visualizing the different molecule(s) in the model. For each molecule a color is defined and applied to both the atom(s) in the model and the corresponding line in the "<span><code>Molecule(s)</code></span>" tab.<br />
+As illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#ivizm" data-reference-type="ref" data-reference="ivizm">7.6</a> the effect of the first check button <a href="#vizm" data-reference-type="ref" data-reference="vizm">[vizm]</a> is to help visualizing the different molecule(s) in the model. For each molecule a color is defined and applied to both the atom(s) in the model and the corresponding line in the "<span><code>Molecule(s)</code></span>" tab.<br />
 </p>
 <div id="ivizm">
 <div align="center">
@@ -142,7 +142,7 @@ As illustrated in figure <a href="#ivizm" data-reference-type="ref" data-refere
 </div>
 </div>
 <p><br />
-Whereas as illustrated in figure <a href="#ivizn" data-reference-type="ref" data-reference="ivizn">7.7</a> the effect of the second check button <a href="#vizn" data-reference-type="ref" data-reference="vizn">[vizn]</a> is to help visualizing the atom numbers as assigned in the "<span><code>FIELD</code></span>" file, numbers range from 1 to the total number of atom(s) in the molecule.</p>
+Whereas as illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#ivizn" data-reference-type="ref" data-reference="ivizn">7.7</a> the effect of the second check button <a href="#vizn" data-reference-type="ref" data-reference="vizn">[vizn]</a> is to help visualizing the atom numbers as assigned in the "<span><code>FIELD</code></span>" file, numbers range from 1 to the total number of atom(s) in the molecule.</p>
 <div id="ivizn">
 <div align="center">
 <figure>
@@ -156,10 +156,10 @@ Whereas as illustrated in figure <a href="#ivizn" data-reference-type="ref" dat
 <li><p>Double click anywhere on the line to edit the name of the molecule.</p></li>
 <li><p>Use the right click to open the contextual menu to edit the name/add/remove molecule(s).</p></li>
 </ul>
-<p>As illustrated in figures <a href="#moladd" data-reference-type="ref" data-reference="moladd">7.8</a> and <a href="#molrem" data-reference-type="ref" data-reference="molrem">7.9</a> it is possible to add molecule(s) to the force field, or to merge existing molecules from the force field into a single description:</p>
+<p>As illustrated in figures <a href="/Atomes-doc/chap-7/section-1/sub-section-1#moladd" data-reference-type="ref" data-reference="moladd">7.8</a> and <a href="/Atomes-doc/chap-7/section-1/sub-section-1#molrem" data-reference-type="ref" data-reference="molrem">7.9</a> it is possible to add molecule(s) to the force field, or to merge existing molecules from the force field into a single description:</p>
 <ul>
-<li><p>Providing that the multiplicity of a molecule is higher than 1, and therefore than several identical molecular fragment exist, it is possible to split the existing molecule, preserving the old description for the non-selected fragment(s) and creating a copy for the selected fragment(s). This process is illustrated in figure <a href="#moladd" data-reference-type="ref" data-reference="moladd">7.8</a>.</p></li>
-<li><p>Providing that some molecules in the force field have the same chemistry and connectivity it is possible to merge the description this two separates molecules as one. This process is illustrated in figure <a href="#molrem" data-reference-type="ref" data-reference="molrem">7.9</a>.</p></li>
+<li><p>Providing that the multiplicity of a molecule is higher than 1, and therefore than several identical molecular fragment exist, it is possible to split the existing molecule, preserving the old description for the non-selected fragment(s) and creating a copy for the selected fragment(s). This process is illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#moladd" data-reference-type="ref" data-reference="moladd">7.8</a>.</p></li>
+<li><p>Providing that some molecules in the force field have the same chemistry and connectivity it is possible to merge the description this two separates molecules as one. This process is illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#molrem" data-reference-type="ref" data-reference="molrem">7.9</a>.</p></li>
 </ul>
 <div id="moladd">
 <div align="center">
@@ -189,7 +189,7 @@ Whereas as illustrated in figure <a href="#ivizn" data-reference-type="ref" dat
 </div>
 </div>
 <p><br />
-As illustrated in figure <a href="#atab" data-reference-type="ref" data-reference="atab">7.10</a> the first element to notice in the "<span><code>Atom(s)</code></span>" tab is the combo box for the choice of the molecule to work on, that same combo box will be inserted in any tab dedicated to intra-molecular interactions.<br />
+As illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#atab" data-reference-type="ref" data-reference="atab">7.10</a> the first element to notice in the "<span><code>Atom(s)</code></span>" tab is the combo box for the choice of the molecule to work on, that same combo box will be inserted in any tab dedicated to intra-molecular interactions.<br />
 <br />
 Each line corresponds to a particular atom for the molecule specified above, and for each atom the information is as follow:</p>
 <ol>
@@ -218,7 +218,7 @@ Each line corresponds to a particular atom for the molecule specified above, and
 <br /></figure>
 </div>
 </div>
-<p>Before editing an atom property it might be necessary to add or remove some atom types from the existing description, these actions are available using the mouse right button contextual menu. As illustrated in figure <a href="#a-add" data-reference-type="ref" data-reference="a-add">7.11</a> it is possible to create a new type of atom from an existing atom type that contains more that 1 atom. And as illustrated in figure <a href="#a-rem" data-reference-type="ref" data-reference="a-rem">7.12</a> it is possible to merge an existing atom description with any other atom type of the same chemical species. Whether it is for inserting or merging an atom it is important to specify that all existing atomic descriptions, a part for the new one or the one to be removed, will be preserved and thus that no information will be lost in this process.<br />
+<p>Before editing an atom property it might be necessary to add or remove some atom types from the existing description, these actions are available using the mouse right button contextual menu. As illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#a-add" data-reference-type="ref" data-reference="a-add">7.11</a> it is possible to create a new type of atom from an existing atom type that contains more that 1 atom. And as illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#a-rem" data-reference-type="ref" data-reference="a-rem">7.12</a> it is possible to merge an existing atom description with any other atom type of the same chemical species. Whether it is for inserting or merging an atom it is important to specify that all existing atomic descriptions, a part for the new one or the one to be removed, will be preserved and thus that no information will be lost in this process.<br />
 <br />
 Editing an atom properties, by double clicking on the atom line or using the contextual menu, will open the "<span><code>Atom parameter(s)</code></span>" dialog:<br />
 </p>
@@ -231,7 +231,7 @@ Editing an atom properties, by double clicking on the atom line or using the con
 </div>
 </div>
 <p><br />
-The "<span><code>Field parameters</code></span>" combo allows to switch between "<span><code>Manual</code></span>" (user defined only) and "<span><code>Automatic</code></span>" force field parameters (if any available). By default the choice is set on "<span><code>Manual</code></span>" and the "<span><code>Force field type</code></span>" combo is inactive. The "<span><code>Frozen</code></span>" button allows to pick atom(s) to be frozen among the edited atom type (see figure <a href="#a-edit" data-reference-type="ref" data-reference="a-edit">7.13</a>). When selecting "<span><code>Automatic</code></span>" for the "<span><code>Field parameters</code></span>" combo, providing that some force field parameters are found "<span><code>Force field type</code></span>" combo becomes active and offers to choose between available description(s):<br />
+The "<span><code>Field parameters</code></span>" combo allows to switch between "<span><code>Manual</code></span>" (user defined only) and "<span><code>Automatic</code></span>" force field parameters (if any available). By default the choice is set on "<span><code>Manual</code></span>" and the "<span><code>Force field type</code></span>" combo is inactive. The "<span><code>Frozen</code></span>" button allows to pick atom(s) to be frozen among the edited atom type (see figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#a-edit" data-reference-type="ref" data-reference="a-edit">7.13</a>). When selecting "<span><code>Automatic</code></span>" for the "<span><code>Field parameters</code></span>" combo, providing that some force field parameters are found "<span><code>Force field type</code></span>" combo becomes active and offers to choose between available description(s):<br />
 </p>
 <div id="f-edit">
 <div align="center">
@@ -242,7 +242,7 @@ The "<span><code>Field parameters</code></span>" combo allows to switch between 
 </div>
 </div>
 <p><br />
-As soon as a selection has been made a dialog (see fig. <a href="#amb-at" data-reference-type="ref" data-reference="amb-at">7.15</a>) pops up to update the "<span><code>FIELD</code></span>" file with the available parameters in the force field selected at the initializing stage of the assistant (Amber 99 in this example).<br />
+As soon as a selection has been made a dialog (see fig. <a href="/Atomes-doc/chap-7/section-1/sub-section-1#amb-at" data-reference-type="ref" data-reference="amb-at">7.15</a>) pops up to update the "<span><code>FIELD</code></span>" file with the available parameters in the force field selected at the initializing stage of the assistant (Amber 99 in this example).<br />
 </p>
 <div id="amb-at">
 <div align="center">
@@ -252,7 +252,7 @@ As soon as a selection has been made a dialog (see fig. <a href="#amb-at" data-
 <br /></figure>
 </div>
 </div>
-<p>The number of lines in the table in figure <a href="#amb-at" data-reference-type="ref" data-reference="amb-at">7.15</a> depends on both the option(s) ("<span><code>Flexible chemical bond(s), Bond angle(s) ...</code></span>") selected to create the "<span><code>FIELD</code></span>" file, the line will appears only if the option was selected, and the availability of the data for that particular type of atom in the selected force field. In this example all the properties presented were selected to create the "<span><code>FIELD</code></span>" file and some data exist in the force field for the "<span><code>CB</code></span>" atom type with each particular property. This dialog helps to update quickly any parameters to be used to create the "<span><code>FIELD</code></span>" file:</p>
+<p>The number of lines in the table in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#amb-at" data-reference-type="ref" data-reference="amb-at">7.15</a> depends on both the option(s) ("<span><code>Flexible chemical bond(s), Bond angle(s) ...</code></span>") selected to create the "<span><code>FIELD</code></span>" file, the line will appears only if the option was selected, and the availability of the data for that particular type of atom in the selected force field. In this example all the properties presented were selected to create the "<span><code>FIELD</code></span>" file and some data exist in the force field for the "<span><code>CB</code></span>" atom type with each particular property. This dialog helps to update quickly any parameters to be used to create the "<span><code>FIELD</code></span>" file:</p>
 <div id="amb-li">
 <div align="center">
 <figure>
@@ -262,7 +262,7 @@ As soon as a selection has been made a dialog (see fig. <a href="#amb-at" data-
 </div>
 </div>
 <p><br />
-As illustrated in figure <a href="#amb-li" data-reference-type="ref" data-reference="amb-li">7.16</a> to update any "<span><code>FIELD</code></span>" file value simply browse the property tree, select the desired force field parameters among available data, remember to check the "<span><code>update</code></span>" button at the end of the line, and finally pressed the "<span><code>Apply</code></span>" button.</p>
+As illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#amb-li" data-reference-type="ref" data-reference="amb-li">7.16</a> to update any "<span><code>FIELD</code></span>" file value simply browse the property tree, select the desired force field parameters among available data, remember to check the "<span><code>update</code></span>" button at the end of the line, and finally pressed the "<span><code>Apply</code></span>" button.</p>
 <h5 class="unnumbered" id="core-shell-units">"<span><code>Core-shell unit(s)</code></span>"</h5>
 <div id="css">
 <div align="center">
@@ -310,7 +310,7 @@ As illustrated in figure <a href="#amb-li" data-reference-type="ref" data-refer
 </div>
 <h5 class="unnumbered" id="flexible-chemical-bonds-and-bond-restraints">"<span><code>Flexible chemical bond(s)</code></span>" and "<span><code>Bond restraint(s)</code></span>"</h5>
 <p>The tabs for the "<span><code>Flexible chemical bond(s)</code></span>" and the "<span><code>Bond restraint(s)</code></span>" being extremely similar, this manual presents only the part related to "<span><code>Flexible chemical bond(s)</code></span>".<br />
-As illustrated in figure <a href="#bds" data-reference-type="ref" data-reference="bds">7.22</a> the bonds, for the selected molecule, are listed by type depending on the nature of the field atoms involved, also for each type of bond it is possible to display every single bond in the molecule.<br />
+As illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#bds" data-reference-type="ref" data-reference="bds">7.22</a> the bonds, for the selected molecule, are listed by type depending on the nature of the field atoms involved, also for each type of bond it is possible to display every single bond in the molecule.<br />
 </p>
 <div id="bds">
 <div align="center">
@@ -332,7 +332,7 @@ Each line corresponds to a either to a bond type, or a particular bond, for the 
 <li><p>Potential to use to describe all bonds of that type ("<span><code>Default:</code></span>" value) or that particular bond in the model.</p></li>
 <li><p>Numerical value(s) for the parameters of the selected potential.</p></li>
 </ol>
-<p>The description of the bond(s) can be modified simultaneously for all bond(s) of the same type using the root line that type, or one by one by browsing the list and picking any line. It is therefore possible to choose a different parametrization for every single bond in the molecule. Some parameters can be modified directly in the table, otherwise a simple double click using the mouse left button will open the bond edition dialog illustrated in figure <a href="#bded" data-reference-type="ref" data-reference="bded">7.23</a>.</p>
+<p>The description of the bond(s) can be modified simultaneously for all bond(s) of the same type using the root line that type, or one by one by browsing the list and picking any line. It is therefore possible to choose a different parametrization for every single bond in the molecule. Some parameters can be modified directly in the table, otherwise a simple double click using the mouse left button will open the bond edition dialog illustrated in figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#bded" data-reference-type="ref" data-reference="bded">7.23</a>.</p>
 <div id="bded">
 <div align="center">
 <figure>
@@ -341,7 +341,7 @@ Each line corresponds to a either to a bond type, or a particular bond, for the 
 <br /></figure>
 </div>
 </div>
-<p>In figure <a href="#bded" data-reference-type="ref" data-reference="bded">7.23</a> the "<span><code>Field parameters</code></span>" combo box presents the list of matching parameters, chemical species wise, found in the force field selected at the initialization stage.<br />
+<p>In figure <a href="/Atomes-doc/chap-7/section-1/sub-section-1#bded" data-reference-type="ref" data-reference="bded">7.23</a> the "<span><code>Field parameters</code></span>" combo box presents the list of matching parameters, chemical species wise, found in the force field selected at the initialization stage.<br />
 The next tabs of the assistant dedicated to intra-molecular properties are as follow:</p>
 <ul>
 <li><p>"<span><code>Bond angle(s)</code></span>"</p></li>
@@ -454,7 +454,7 @@ The next tabs of the assistant dedicated to intra-molecular properties are as fo
 </div>
 </div>
 <p><br />
-The "<span><code>DL-POLY files preview</code></span>" dialog (fig. <a href="#prevdlp" data-reference-type="ref" data-reference="prevdlp">7.34</a>) contains a notebook with up to 3 tabs depending on the file(s) to be created. Each tab presents the content of a file, "<span><code>CONTROL</code></span>", "<span><code>FIELD</code></span>" or "<span><code>CONFIG</code></span>", and highlights option(s) and keyword(s) using color(s) and font layout option(s).</p>
+The "<span><code>DL-POLY files preview</code></span>" dialog (fig. <a href="/Atomes-doc/chap-7/section-1/sub-section-1#prevdlp" data-reference-type="ref" data-reference="prevdlp">7.34</a>) contains a notebook with up to 3 tabs depending on the file(s) to be created. Each tab presents the content of a file, "<span><code>CONTROL</code></span>", "<span><code>FIELD</code></span>" or "<span><code>CONFIG</code></span>", and highlights option(s) and keyword(s) using color(s) and font layout option(s).</p>
 <h5 id="finalizing-the-assistant-and-files-creation">Finalizing the assistant and file(s) creation</h5>
 <p>When pressing the "<span><code>Apply</code></span>" button on the file tab of the assistant, the user is asked to selected a folder. "<span><code>CONTROL</code></span>", "<span><code>FIELD</code></span>" and "<span><code>CONFIG</code></span>" if selected, will be created in the selected directory.<br />
 Following the file(s) creation or if the assistant is closed anyway, the "<span><code>DL-POLY</code></span>" force field data will be preserved. Therefore allowing the re-open the assistant later for further modifications.<br />

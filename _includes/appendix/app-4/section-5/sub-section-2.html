@@ -1,7 +1,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 <h5 id="sking">King’s shortest paths criterion</h5>
-<p>The first way to define a ring has been given by Shirley V. King {% cite Nature.213.1112 %} (and later by Franzblau {% cite PhysRevB.44.4925 %}). In order to study the connectivity of glassy SiO<span class="math inline">\(_2\)</span> she defines a ring as the shortest path between two of the nearest neighbors of a given node [Fig. <a href="#SP" data-reference-type="ref" data-reference="SP">4.13</a>].</p>
+<p>The first way to define a ring has been given by Shirley V. King {% cite Nature.213.1112 %} (and later by Franzblau {% cite PhysRevB.44.4925 %}). In order to study the connectivity of glassy SiO<span class="math inline">\(_2\)</span> she defines a ring as the shortest path between two of the nearest neighbors of a given node [Fig. <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#SP" data-reference-type="ref" data-reference="SP">4.13</a>].</p>
 <div id="SP">
 <div align="center">
 <figure>
@@ -14,9 +14,9 @@
 In the case of the King’s criterion one can calculate the maximum number of different ring sizes, <span class="math inline">\(NS_{max}(KSP)\)</span>, which can be found using the atom <span><strong><span>At</span></strong></span> to initiate the search: <span class="math display">\[\label{lmaxsp}
 	NS_{max}(KSP)\ =\ \frac{Nc({\textbf{At}}) \times (Nc({\textbf{At}})-1)}{2}\]</span> where <span class="math inline">\(N_c({\textbf{At}})\)</span> is the number of neighbors of atom <span><strong><span>At</span></strong></span>. <span class="math inline">\(NS_{max}(KSP)\)</span> represents the number of ring sizes found if all couples of neighbors of atom <span><strong><span>At</span></strong></span> are connected together with paths of different sizes.<br />
 It is also possible to calculate the theoretical maximum size, <span class="math inline">\(TMS(KSP)\)</span>, of a King’s shortest path ring in the network using: <span class="math display">\[\label{tmsking}
-TMS(KSP)\ = 2\ \times\ (D_{max}\ -\ 2)\ \times (Nc_{max}\ -\ 2)\ +\ 2\ \times\ D_{max}\]</span> where <span class="math inline">\(D_{max}\)</span> is the longest distance, in number of chemical bonds, separating two atoms in the network, and <span class="math inline">\(Nc_{max}\)</span> represents the average number of neighbors of the chemical species of higher coordination. If used when looking for rings, periodic boundary conditions have to be taken into account to calculate <span class="math inline">\(D_{max}\)</span>. The relation [Eq. <a href="#tmsking" data-reference-type="ref" data-reference="tmsking">[tmsking]</a>] is illustrated in figure <a href="#tms" data-reference-type="ref" data-reference="tms">4.16</a>-2).</p>
+TMS(KSP)\ = 2\ \times\ (D_{max}\ -\ 2)\ \times (Nc_{max}\ -\ 2)\ +\ 2\ \times\ D_{max}\]</span> where <span class="math inline">\(D_{max}\)</span> is the longest distance, in number of chemical bonds, separating two atoms in the network, and <span class="math inline">\(Nc_{max}\)</span> represents the average number of neighbors of the chemical species of higher coordination. If used when looking for rings, periodic boundary conditions have to be taken into account to calculate <span class="math inline">\(D_{max}\)</span>. The relation [Eq. <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#tmsking" data-reference-type="ref" data-reference="tmsking">[tmsking]</a>] is illustrated in figure <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#tms" data-reference-type="ref" data-reference="tms">4.16</a>-2).</p>
 <h5 id="sppc">Guttman’s shortest paths criterion</h5>
-<p>A later definition of ring was proposed by Guttman {% cite Guttman-116-145 %}, who defines a ring as the shortest path which comes back to a given node (or atom) from one of its nearest neighbors [Fig. <a href="#Kc" data-reference-type="ref" data-reference="Kc">4.14</a>].</p>
+<p>A later definition of ring was proposed by Guttman {% cite Guttman-116-145 %}, who defines a ring as the shortest path which comes back to a given node (or atom) from one of its nearest neighbors [Fig. <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#Kc" data-reference-type="ref" data-reference="Kc">4.14</a>].</p>
 <div id="Kc">
 <div align="center">
 <figure>
@@ -26,7 +26,7 @@ TMS(KSP)\ = 2\ \times\ (D_{max}\ -\ 2)\ \times (Nc_{max}\ -\ 2)\ +\ 2\ \times\ D
 </div>
 </div>
 <p><br />
-Differences between the King and the Guttman’s shortest paths criteria are illustrated in figure <a href="#DKPCC" data-reference-type="ref" data-reference="DKPCC">4.15</a>.</p>
+Differences between the King and the Guttman’s shortest paths criteria are illustrated in figure <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#DKPCC" data-reference-type="ref" data-reference="DKPCC">4.15</a>.</p>
 <div id="DKPCC">
 <div align="center">
 <figure>
@@ -38,7 +38,7 @@ Differences between the King and the Guttman’s shortest paths criteria are ill
 <p><br />
 Like for the King’s criterion, with the Guttman’s criterion one can calculate the maximum number of different ring sizes, <span class="math inline">\(NS_{max}(GSP)\)</span>, which can be found using the atom <span><strong><span>At</span></strong></span> to initiate the search: <span class="math display">\[NS_{max}(GSP) = N_c({\textbf{At}}) - 1\]</span> where <span class="math inline">\(N_c({\textbf{At}})\)</span> is the number of neighbors of atom <span><strong><span>At</span></strong></span>. <span class="math inline">\(NS_{max}(GSP)\)</span> represents the number of ring sizes found if the neighbors of atom <span><strong><span>At</span></strong></span> are connected together with paths of different sizes.<br />
 It is also possible to calculate the <span><strong><span>T</span></strong></span>heoretical <span><strong><span>M</span></strong></span>aximum <span><strong><span>S</span></strong></span>ize, <span class="math inline">\(TMS(GSP)\)</span>, of a Guttman’s ring in the network using: <span class="math display">\[\label{tmsg}
-TMS(GSP)\ = 2\ \times\ D_{max}\]</span> where <span class="math inline">\(D_{max}\)</span> represents the longest distance, in number of chemical bonds, separating two atoms in the network. If used when looking for rings, periodic boundary conditions have to be taken into account to calculate <span class="math inline">\(D_{max}\)</span>. The relation [Eq. <a href="#tmsg" data-reference-type="ref" data-reference="tmsg">[tmsg]</a>] is illustrated in figure <a href="#tms" data-reference-type="ref" data-reference="tms">4.16</a>-1.</p>
+TMS(GSP)\ = 2\ \times\ D_{max}\]</span> where <span class="math inline">\(D_{max}\)</span> represents the longest distance, in number of chemical bonds, separating two atoms in the network. If used when looking for rings, periodic boundary conditions have to be taken into account to calculate <span class="math inline">\(D_{max}\)</span>. The relation [Eq. <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#tmsg" data-reference-type="ref" data-reference="tmsg">[tmsg]</a>] is illustrated in figure <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#tms" data-reference-type="ref" data-reference="tms">4.16</a>-1.</p>
 <div id="tms">
 <div align="center">
 <figure>
@@ -50,7 +50,7 @@ TMS(GSP)\ = 2\ \times\ D_{max}\]</span> where <span class="math inline">\(D_{max
 <p><br />
 Since the introduction of the King’s and the Guttman’s criteria other definitions of rings have been proposed. These definitions are based on the properties of the rings to be decomposed into the sum of smaller rings.</p>
 <h5 id="the-primitive-rings-criterion">The primitive rings criterion</h5>
-<p>A ring is primitive {% cite Goetzke-127.215 YuanCormack-24-343 %} (or Irreducible {% cite Wooten-bk0109 %}) if it can not be decomposed into two smaller rings [Fig. <a href="#Pr" data-reference-type="ref" data-reference="Pr">4.17</a>].</p>
+<p>A ring is primitive {% cite Goetzke-127.215 YuanCormack-24-343 %} (or Irreducible {% cite Wooten-bk0109 %}) if it can not be decomposed into two smaller rings [Fig. <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#Pr" data-reference-type="ref" data-reference="Pr">4.17</a>].</p>
 <div id="Pr">
 <div align="center">
 <figure>
@@ -60,7 +60,7 @@ Since the introduction of the King’s and the Guttman’s criteria other defini
 </div>
 </div>
 <p><br />
-The primitive rings analysis between the paths in figure <a href="#Pr" data-reference-type="ref" data-reference="Pr">4.17</a> may lead to 3 results depending on the relations between the paths A, B, and C:</p>
+The primitive rings analysis between the paths in figure <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#Pr" data-reference-type="ref" data-reference="Pr">4.17</a> may lead to 3 results depending on the relations between the paths A, B, and C:</p>
 <ul>
 <li><p>If paths A, B, and C have the same length: A = B = C then the rings ’AB’, ’AC’ and ’BC’ are primitives.</p></li>
 <li><p>If the relation between the paths is like <span class="math inline">\(?=?&lt;?\)</span> (ex: A = B &lt; C) then 1 smaller ring (’AB’) and 2 bigger rings (’AC’ and ’BC’) exist. None of these rings can be decomposed into the sum of two smaller rings therefore the 3 rings are again primitives.</p></li>
@@ -78,5 +78,5 @@ The primitive rings analysis between the paths in figure <a href="#Pr" data-ref
 </div>
 </div>
 <p><br />
-By definition the strong rings are also primitives, therefore to search for strong rings can be summed as to find the strong rings among the primitive rings. This technique is limited to relatively simple cases, like crystals or structures such as the one illustrated in figure <a href="#Str" data-reference-type="ref" data-reference="Str">4.18</a>. On the one hand the CPU time needed to complete such an analysis for amorphous systems is very important. On the other hand it is not possible to search for strong rings using the same search depth than for other types of rings. The strong ring analysis is indeed diverging which makes it very complex to implement for amorphous materials.<br />
+By definition the strong rings are also primitives, therefore to search for strong rings can be summed as to find the strong rings among the primitive rings. This technique is limited to relatively simple cases, like crystals or structures such as the one illustrated in figure <a href="/Atomes-doc/appendix/app-4/section-5/sub-section-2#Str" data-reference-type="ref" data-reference="Str">4.18</a>. On the one hand the CPU time needed to complete such an analysis for amorphous systems is very important. On the other hand it is not possible to search for strong rings using the same search depth than for other types of rings. The strong ring analysis is indeed diverging which makes it very complex to implement for amorphous materials.<br />
 In the case of primitive rings like in the case of strong rings, there is no theoretical maximum size of rings in the network.</p>
