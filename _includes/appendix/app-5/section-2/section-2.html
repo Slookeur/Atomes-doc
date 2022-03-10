@@ -1,9 +1,38 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-<div id="nscatt">
+<p>The Radial Distribution Function, R.D.F. , g(r), also called pair distribution function or pair correlation function, is an important structural characteristic, therefore computed by <span><em><span><strong><span>Atomes</span></strong></span></em></span>.</p>
+<div id="gr-fig">
 <div align="center">
 <figure>
-<img src="/Atomes-doc/img/nscatt.png" id="nscatt" style="width:10.5cm" alt="Neutron scattering lengths used in the Atomes program." />
-<figcaption aria-hidden="true"><strong><span>Figure 5.1:</span></strong> Neutron scattering lengths used in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<img src="/Atomes-doc/img/phys/gr.png" id="gr-fig" style="width:8cm" alt="Space discretization for the evaluation of the radial distribution function." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.2:</span></strong> Space discretization for the evaluation of the radial distribution function.</figcaption>
 <br /></figure>
 </div>
+</div>
+<p><br />
+Considering a homogeneous distribution of the atoms/molecules in space, the <span class="math inline">\(g(r)\)</span> represents the probability to find an atom in a shell <span class="math inline">\(dr\)</span> at the distance <span class="math inline">\(r\)</span> of another atom chosen as a reference point [Fig. <a href="/Atomes-doc/appendix/app-5/section-2#gr-fig" data-reference-type="ref" data-reference="gr-fig">5.2</a>]. By dividing the physical space/model volume into shells dr [Fig. <a href="/Atomes-doc/appendix/app-5/section-2#gr-fig" data-reference-type="ref" data-reference="gr-fig">5.2</a>] it is possible to compute the number of atoms <span class="math inline">\(dn(r)\)</span> at a distance between <span class="math inline">\(r\)</span> and <span class="math inline">\(r + dr\)</span> from a given atom: <span class="math display">\[\label{g2r_1}
+dn(r)\ =\ \frac{N}{V}\ g(r)\ 4\pi\ r^{2}\ dr\]</span> where <span class="math inline">\(N\)</span> represents the total number of atoms, <span class="math inline">\(V\)</span> the model volume and where <span class="math inline">\(g(r)\)</span> is the radial distribution function. In this notation the volume of the shell of thickness <span class="math inline">\(dr\)</span> is approximated: <span class="math display">\[\left(V_{\text{shell}}\ =\ \displaystyle{\frac{4}{3}} \pi (r+dr)^3\ -\ \displaystyle{\frac{4}{3}} \pi r^3 \ \simeq\ 4\pi\ r^{2}\ dr \right)\]</span> When more than one chemical species are present the so-called partial radial distribution functions <span class="math inline">\(g_{\alpha\beta}(r)\)</span> may be computed : <span class="math display">\[\label{g2r_4}
+g_{\alpha \beta}(r)\ =\ \frac{dn_{\alpha \beta}(r)}{4\pi r^{2}\ dr\ \rho_{\alpha}} \qquad \text{with} \qquad \rho_{\alpha}\ =\ \frac{V}{N_\alpha}\ =\ \frac{V}{N\times c_\alpha}\]</span> where <span class="math inline">\(c_\alpha\)</span> represents the concentration of atomic species <span class="math inline">\(\alpha\)</span>. These functions give the density probability for an atom of the <span class="math inline">\(\alpha\)</span> species to have a neighbor of the <span class="math inline">\(\beta\)</span> species at a given distance <span class="math inline">\(r\)</span>. The example features GeS<span class="math inline">\(_2\)</span> glass.<br />
+</p>
+<div id="grp300K">
+<div align="center">
+<figure>
+<img src="/Atomes-doc/img/phys/grp300K.png" id="grp300K" style="width:16cm" alt="Partial radial distribution functions of glassy GeS_2 at 300 K." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.3:</span></strong> Partial radial distribution functions of glassy GeS<span class="math inline">\(_2\)</span> at 300 K.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+Figure <a href="/Atomes-doc/appendix/app-5/section-2#grp300K" data-reference-type="ref" data-reference="grp300K">5.3</a> shows the partial radial distribution functions for GeS<span class="math inline">\(_2\)</span> glass at 300 K. The total RDF of a system is a weighted sum of the respective partial RDFs, with the weights depend on the relative concentration and x-ray/neutron scattering amplitudes of the chemical species involved.<br />
+It is also possible to use the reduced <span class="math inline">\({\bf{G}}_{\alpha\beta}(r)\)</span> partial distribution functions defined as: <span class="math display">\[{\bf{G}}_{\alpha\beta}(r)\ =\ 4\pi r \rho_0 \left(g_{\alpha \beta}(r)\ - 1\right)\]</span><br />
+<span><em><span><strong><span>Atomes</span></strong></span></em></span> gives access to:</p>
+<ul>
+<li><p>The partial <span class="math inline">\(g_{\alpha \beta}(r)\)</span> and <span class="math inline">\({\bf{G}}_{\alpha\beta}(r)\)</span> distribution functions, and more see [Eq.<a href="#s2q_9" data-reference-type="ref" data-reference="s2q_9">[s2q_9]</a>].</p></li>
+<li><p>The corresponding <span class="math inline">\(dn_{\alpha \beta}(r)\)</span> integrated number of neighbors.<br />
+</p></li>
+</ul>
+<p>Also two methods are available to compute the radial distribution functions:</p>
+<ul>
+<li><p>The standard real space calculation typical to analyze 3-dimensional models</p></li>
+<li><p>The experiment-like calculation using the Fourier transform of the structure factor obtained using the Debye equation (see section <a href="/Atomes-doc/appendix/app-5/section-3/" data-reference-type="ref" data-reference="scatt">5.3</a> for details).</p></li>
+</ul>

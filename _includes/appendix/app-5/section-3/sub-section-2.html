@@ -1,0 +1,63 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p>There are a few, somewhat different definitions of partials <span class="math inline">\(S(q)\)</span> used in practice, and computed by <span><em><span><strong><span>Atomes</span></strong></span></em></span></p>
+<h5 id="faber-ziman-definitionformalism">Faber-Ziman definition/formalism</h5>
+<p>One way used to define the partial structure factors has been proposed by Faber and Ziman {% cite PhilMag.11.153 %}. In this approach the structure factor is represented by the correlations between the different chemical species. To describe the correlation between the <span class="math inline">\(\alpha\)</span> and the <span class="math inline">\(\beta\)</span> chemical species the partial structure factor <span class="math inline">\(S^{FZ}_{\alpha \beta}(q)\)</span> is defined by: <span class="math display">\[\label{sqp0}
+S^{FZ}_{\alpha \beta}(q)\ =\ 1\ +\ 4 \pi \rho \int_{0}^{\infty}\ dr\ r^{2}\ \frac{\sin qr}{qr}\ \left(g_{\alpha \beta}(r)-1\right)\]</span> where the <span class="math inline">\(g_{\alpha \beta}(r)\)</span> are the partial radial distribution functions [Eq. <a href="#g2r_4" data-reference-type="ref" data-reference="g2r_4">[g2r_4]</a>].<br />
+The total structure factor is then obtained by the relation: <span class="math display">\[\label{sqp1}
+S(q)\ =\ \sum_{\alpha,\beta}\ c_{\alpha} b_{\alpha}\ c_{\beta} b_{\beta}\ \left[S^{FZ}_{\alpha \beta}(q)\ -\ 1\right]\]</span></p>
+<h5 id="ashcroft-langreth-definitionformalism">Ashcroft-Langreth definition/formalism</h5>
+<p>In a similar approach, based on the correlation between the chemical species, and developed by Ashcroft and Langreth {% cite PhysRev.156.685 PhysRev.159.500 PhysRev.166.934.2 %}, the partial structure factors <span class="math inline">\(S^{AL}_{\alpha \beta}(q)\)</span> are defined by: <span class="math display">\[\label{sqp2}
+S^{AL}_{\alpha \beta}(q)\ =\ \delta_{\alpha \beta}\ +\ 4 \pi \rho \left({c_\alpha c_\beta}\right)^{1/2}\ \int_{0}^{\infty}\ dr\ r^{2}\ \frac{\sin qr}{qr}\ \left(g_{\alpha \beta}(r)-1\right)\]</span> where <span class="math inline">\(\delta_{\alpha \beta}\)</span> is the Kronecker delta, <span class="math inline">\(c_\alpha = \displaystyle{\frac{N_\alpha}{N}}\)</span>, and the <span class="math inline">\(g_{\alpha \beta}(r)\)</span> are the partial radial distribution functions [Eq. <a href="#g2r_4" data-reference-type="ref" data-reference="g2r_4">[g2r_4]</a>].<br />
+Then the total structure factor can be calculated using: <span class="math display">\[\label{sqp3}
+S(q)\ =\ \frac{\displaystyle{\sum_{\alpha, \beta}}\ b_\alpha b_\beta\ \left({c_\alpha c_\beta}\right)^{1/2}\ \left[S^{AL}_{\alpha \beta}(q)\ +\ 1\right]}{\displaystyle\sum_{\alpha}\ c_\alpha b_\alpha^2}\]</span></p>
+<h5 id="bhatia-thornton-definitionformalism">Bhatia-Thornton definition/formalism</h5>
+<p>In this approach, used in the case of binary systems AB<span class="math inline">\(_x\)</span> {% cite PhysRevB.2.3004 %} only, the total structure factor <span class="math inline">\(S(q)\)</span> can be express as the weighted sum of 3 partial structure factors: <span class="math display">\[\label{sqp4}
+S(q)= \frac{\langle b \rangle^2 S_{NN}(q) + 2\langle b \rangle(b_\text{A} -b_\text{B})S_{NC}(q) + (b_\text{A}-b_\text{B})^2S_{CC}(q) - (c_\text{A} b_\text{A}^2 + c_\text{B} b_\text{B}^2)}{\langle b \rangle^2}\ +\ 1\]</span> where <span class="math inline">\(\langle b \rangle = c_\text{A} b_\text{A} + c_\text{B} b_\text{B}\)</span>, with <span class="math inline">\(c_\text{A}\)</span> and <span class="math inline">\(b_\text{A}\)</span> representing respectively the concentration and the scattering length of species <span class="math inline">\(\text{A}\)</span>.<br />
+<span class="math inline">\(S_{NN}(q)\)</span>, <span class="math inline">\(S_{NC}(q)\)</span> and <span class="math inline">\(S_{CC}(q)\)</span> represent combinations of the partial structure factors calculated using the Faber-Ziman formalism and weighted using the concentrations of the 2 chemical species: <span class="math display">\[\label{sqp5}
+S_{NN}(q) = \sum_{\text{A}=1}^{2} \sum_{\text{B}=1}^{2} c_{\text{A}} c_{\text{B}} S^{FZ}_{\text{A} \text{B}}(q)\]</span> <span class="math display">\[\label{sqp6}
+ S_{NC}(q) = c_{\text{A}} c_{\text{B}} \times \left[\ c_\text{A}\times\left(S^{FZ}_{\text{A}\text{A}}(q) - S^{FZ}_{\text{A} \text{B}}(q)\right)\ -\ c_{\text{B}}\times\left(S^{FZ}_{\text{B}\text{B}}(q) - S^{FZ}_{\text{A} \text{B}}(q)\right)\ \right]\]</span> <span class="math display">\[\label{sqp7}
+S_{CC}(q) = c_{\text{A}} c_{\text{B}} \times \left[ 1 + c_{\text{A}} c_{\text{B}} \times \left[ \sum_{\text{A}=1}^{2} \sum_{\text{B}\ne\text{A}}^{2} \left( S^{FZ}_{\text{A}\text{A}}(q) - S^{FZ}_{\text{A}\text{B}}(q) \right)\right] \right]\]</span></p>
+<dl>
+<dt><span class="math inline">\(\bullet\)</span></dt>
+<dd>
+<p><span class="math inline">\(S_{NN}(q)\)</span> is the Number-Number partial structure factor.<br />
+Its Fourier transform allows to obtain a global description of the structure of the solid, ie. of the distribution of the experimental scattering centers, or atomic nuclei, positions. The nature of the chemical species spread in the scattering centers is not considered. Furthermore if <span class="math inline">\(b_\text{A} =b_\text{B}\)</span> then <span class="math inline">\(S_{NN}(q) = S(q)\)</span>.</p>
+</dd>
+<dt><span class="math inline">\(\bullet\)</span></dt>
+<dd>
+<p><span class="math inline">\(S_{CC}(q)\)</span> is the Concentration-Concentration partial structure factor.<br />
+Its Fourier transform allows to obtain an idea of the distribution of the chemical species over the scattering centers described using the <span class="math inline">\(S_{NN}(q)\)</span>. Therefore the <span class="math inline">\(S_{CC}(q)\)</span> describes the chemical order in the material. In the case of an ideal binary mixture of 2 chemical species <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, <span class="math inline">\(S_{CC}(q)\)</span> is constant and equal to <span class="math inline">\(c_Ac_B\)</span>. In the case of an ordered chemical mixture (chemical species with distinct diameters, and with heteropolar and homopolar chemical bonds) it is possible to link the variations of the <span class="math inline">\(S_{CC}(q)\)</span> to the product of the concentrations of the 2 chemical species of the mixture:</p>
+<ul>
+<li><p><span class="math inline">\(S_{CC}(q) = c_Ac_B\)</span>: random distribution.</p></li>
+<li><p><span class="math inline">\(S_{CC}(q) &gt; c_Ac_B\)</span>: homopolar atomic correlations (A-A, B-B) preferred.</p></li>
+<li><p><span class="math inline">\(S_{CC}(q) &lt; c_Ac_B\)</span>: heteropolar atomic correlations (A-B) preferred.</p></li>
+<li><p><span class="math inline">\(\langle b \rangle = 0\)</span>: <span class="math inline">\(S_{CC}(q) = S(q)\)</span>.</p></li>
+</ul>
+</dd>
+<dt><span class="math inline">\(\bullet\)</span></dt>
+<dd>
+<p><span class="math inline">\(S_{NC}(q)\)</span> is the Number-Concentration partial structure factor.<br />
+Its Fourier transform allows to obtain a correlation between the scattering centers and their occupation by a given chemical species. The more the chemical species related partial structure factors are different (<span class="math inline">\(S_{AA}(q) \ne S_{BB}(q)\)</span>) and the more the oscillations are important in the <span class="math inline">\(S_{NC}(q)\)</span>. In the case of an ideal mixture <span class="math inline">\(S_{NC}(q) = 0\)</span>, and all the information about the structure of the system is given by the <span class="math inline">\(S_{NN}(q)\)</span>.</p>
+</dd>
+</dl>
+<p>If we consider the binary mixture as an ionic mixture then it is possible to calculate the Charge-Charge <span class="math inline">\(S_{ZZ}(q)\)</span> and the Number-Charge <span class="math inline">\(S_{NZ}(q)\)</span> partial structure factors using the Concentration-Concentration <span class="math inline">\(S_{CC}(q)\)</span> and the Number-Concentration <span class="math inline">\(S_{NC}(q)\)</span>: <span class="math display">\[\label{sqp8}
+S_{ZZ}(q) = \frac{S_{CC}(q)}{c_A c_B}  \qquad and \qquad S_{NZ}(q) = \frac{S_{NC}(q)}{c_B/Z_A}\]</span> <span class="math inline">\(c_A\)</span> and <span class="math inline">\(Z_A\)</span> represent the concentration and the charge of the chemical species A, the global neutrality of the system must be respected therefore <span class="math inline">\(c_AZ_A + c_BZ_B=0\)</span>.<br />
+</p>
+<p>Figure <a href="/Atomes-doc/appendix/app-5/section-3/sub-section-2#allsqp" data-reference-type="ref" data-reference="allsqp">5.6</a> illustrates, and allows to compare, the partial structure factors of glassy GeS<span class="math inline">\(_2\)</span> at 300 K calculated in the different formalism Faber-Ziman {% cite PhilMag.11.153 %}, Ashcroft-Langreth {% cite PhysRev.156.685 PhysRev.159.500 PhysRev.166.934.2 %}, and Bhatia-Thornton {% cite PhysRevB.2.3004 %}.<br />
+</p>
+<div id="allsqp">
+<div align="center">
+<figure>
+<img src="/Atomes-doc/img/phys/allsqp.png" id="allsqp" style="width:15cm" alt="Partial structure factors of glassy GeS_2 at 300 K. A Faber-Ziman , B Ashcroft-Langreth  and C Bhatia-Thornton ." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.6:</span></strong> Partial structure factors of glassy GeS<span class="math inline">\(_2\)</span> at 300 K. <span><strong><span>A</span></strong></span> Faber-Ziman {% cite PhilMag.11.153 %}, <span><strong><span>B</span></strong></span> Ashcroft-Langreth {% cite PhysRev.156.685 PhysRev.159.500 PhysRev.166.934.2 %} and <span><strong><span>C</span></strong></span> Bhatia-Thornton {% cite PhysRevB.2.3004 %}.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />  
+<ol>
+<li id="fn2" role="doc-endnote"><p>Particles that can be described using spheres of the same diameter and occupying the same molar volume, subject to the same thermal constrains, in a mixture where the substitution energy of a particle by another is equal to zero.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
