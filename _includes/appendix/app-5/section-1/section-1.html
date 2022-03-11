@@ -1,0 +1,22 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p>Taking into account the finite size of model/simulation box is crucial to compute correctly many of the structural characteristics (e.g. ring statistics) of the system being studied.<br />
+The importance of the finite size of model box can be illustrated using a 1 <span class="math inline">\(dm^3\)</span> edged cube of water (1 L) at room temperature. This cube contains approximately <span class="math inline">\(3.3 \times 10^{25}\)</span> water molecules, each of them can be considered as a sphere having a diameter of 2.8 Å. Following this scheme surface interactions can affect up to 10 layers of spheres (water molecules) far from the surface of the model cubic box. In this case the number of water molecules exposed to the surface is about <span class="math inline">\(2 \times 10^{19}\)</span>, which is a small fraction of the total number of molecules in the model.<br />
+Currently structure models often contain somewhere from 1 thousand to several thousands of molecules/atoms. As a result a very substantial fraction of them will be influenced by the finite size of the simulation/model box. The problems is solved by applying the so-called <span><strong><span>P</span></strong></span>eriodic <span><strong><span>B</span></strong></span>oundary <span><strong><span>C</span></strong></span>onditions "PBC" which means surrounding the simulation box with its translational images in the 3 directions of space, as illustrated below.<br />
+Users of <span><em><span><strong><span>Atomes</span></strong></span></em></span> should take special care that their model boxes are inherently periodic so that when the periodic boundary conditions are applied the structural characteristics computed are not compromised.</p>
+<div id="fpbc">
+<div align="center">
+<figure>
+<img src="/Atomes-doc/img/pbc-seb.png" id="fpbc" style="width:10cm" alt="Schematic representation of the idea of periodic boundary conditions." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.1:</span></strong> Schematic representation of the idea of periodic boundary conditions.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>Figure <a href="/Atomes-doc/appendix/app-5/section-1#fpbc" data-reference-type="ref" data-reference="fpbc">5.1</a> illustrates the principle of the periodic boundary conditions that can be used<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in <span><em><span><strong><span>Atomes</span></strong></span></em></span>: a particle which goes out from the simulation box by one side is reintroduced in the box by the opposite side (in the 3 dimensions of space).<br />
+When PBC are used the maximum inter-atomic distance r<span class="math inline">\(_{max}\)</span> which is taken into account in the calculations, depends on the lattice parameters: <span class="math display">\[r_{max} \simeq \frac{L\times\sqrt{3}}{2}\qquad \text{with}\ L = \text{box size}\]</span> The surface/finite model size effects would therefore be small, if any. In general, the larger the simulation box and the number of molecules/atoms in it, the smaller the surface/size effects will be.</p>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />  
+<ol>
+<li id="fn1" role="doc-endnote"><p>Please note that the use of PBC is not mandatory, isolated molecules can be studied using <span><em><span><strong><span>Atomes</span></strong></span></em></span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>

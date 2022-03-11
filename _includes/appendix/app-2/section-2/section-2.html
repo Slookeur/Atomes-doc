@@ -1,0 +1,54 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p><span><em><span><strong><span>Atomes</span></strong></span></em></span> can be used from the command line, including using the following options:</p>
+<ul>
+<li><p>General options:</p>
+<ul>
+<li><p>"<span><code>-h</code></span>" or "<span><code>–help</code></span>": short help.</p></li>
+<li><p>"<span><code>-v</code></span>" or "<span><code>–version</code></span>": version information.</p></li>
+</ul></li>
+<li><p>File options:</p>
+<ul>
+<li><p>"<span><code>-awf filename</code></span>": open <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace file.</p></li>
+<li><p>"<span><code>-apf filename</code></span>": open <span><em><span><strong><span>Atomes</span></strong></span></em></span> project file.</p></li>
+<li><p>"<span><code>-xyz filename</code></span>": open coordinates in XYZ format {% cite XYZ %}.</p></li>
+<li><p>"<span><code>-pdb filename</code></span>": open coordinates in PDB format.</p></li>
+<li><p>"<span><code>-ent filename</code></span>": open coordinates in PDB format.</p></li>
+<li><p>"<span><code>-c3d filename</code></span>": open coordinates in Chem3D format {% cite Chem3D %}.</p></li>
+<li><p>"<span><code>-cif filename</code></span>": open coordinates in CIF format.</p></li>
+<li><p>"<span><code>-trj filename</code></span>": open CPMD trajectory {% cite CPMD %}.</p></li>
+<li><p>"<span><code>-xdatcar filename</code></span>": open VASP trajectory {% cite VASP %}.</p></li>
+<li><p>"<span><code>-hist filename</code></span>": open DL_POLY history trajectory {% cite DLPOLY %}.</p></li>
+<li><p>"<span><code>-ipf filename</code></span>": open ISAACS project file {% cite ISAACS %}.</p></li>
+</ul></li>
+</ul>
+<ol>
+<li><p>If no file option(s) is (are) provided then <span><em><span><strong><span>Atomes</span></strong></span></em></span> will try to open the file(s) based on its (their) extension(s) (ex: a file which name end by "<span><code>.xyz</code></span>" will be assumed to follow the XYZ structure).</p></li>
+<li><p>The structure of "<span><code>filename</code></span>" is expected to follow the structure introduced with the option (ex: "<span><code>-xyz</code></span>" for a file that contains coordinates in the XYZ format), but "<span><code>filename</code></span>" is not required to have the corresponding extention (ex: "<span><code>.xyz</code></span>").</p></li>
+<li><p>Since <span><em><span><strong><span>Atomes</span></strong></span></em></span> has a single workspace only a single workspace file can be opened via the command line.</p></li>
+</ol>
+<ul>
+<li><p>Examples:</p></li>
+<li><p>Open all PDB files in the active directory:</p>
+<p><br />
+<br />
+</p>
+<div class="lrbox">
+<p><code>user@localhost</code><code> ]$</code><span style="color: blue"><code>atomes</code></span><code> *.pdb</code></p>
+</div>
+<p><span style="background-color: lg"></span></p></li>
+<li><p>Open a workspace file, and other coordinates files:</p>
+<p><br />
+<br />
+</p>
+<div class="lrbox">
+<p><code>user@localhost</code><code> ]$</code><span style="color: blue"><code>atomes</code></span><code> </code><span style="color: cyan"><strong><span><code>-pdb</code></span></strong></span><code> this.f</code><span style="color: red"><strong><span><code>file.awf</code></span></strong></span><code> </code><span style="color: cyan"><strong><span><code>-cif</code></span></strong></span><code> that.f</code><code>*.xyz</code></p>
+</div>
+<p><span style="background-color: lg"></span></p></li>
+</ul>
+<p><span><em><span><strong><span>Atomes</span></strong></span></em></span> will parse the command line, detect that a workspace file "<span style="color: red"><strong><span><code>file.awf</code></span></strong></span>" is to be opened and will open it first.<br />
+Then the other coordinate files will be opened and added to the workspace:</p>
+<ul>
+<li><p>As enforced by the "<span style="color: cyan"><strong><span><code>-pdb</code></span></strong></span>" option, "<span><code>this.f</code></span>" is supposed to follow the PDB format.</p></li>
+<li><p>As enforced by the "<span style="color: cyan"><strong><span><code>-cif</code></span></strong></span>" option, "<span><code>that.f</code></span>" is supposed to follow the CIF format.</p></li>
+<li><p>All files with the "<span><code>.xyz</code></span>" extension in the directory will be opened assuming that they follow the XYZ format.</p></li>

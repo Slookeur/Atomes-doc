@@ -1,0 +1,48 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p>The current version of <span><em><span><strong><span>Atomes</span></strong></span></em></span> can import atomic coordinates in the following formats:<br />
+</p>
+<div align="center">
+<div id="inputs">
+<table>
+<caption><strong><span>Table 1.1:</span></strong> Atomic coordinates file formats read by <span><em><span><strong><span>Atomes</span></strong></span></em></span>.</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(-\)</span>XYZ {% cite XYZ %} <span class="math inline">\(^{*}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(-\)</span>Chem3D {% cite Chem3D %}</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(-\)</span>CPMD trajectory {% cite CPMD %} <span class="math inline">\(^{*}\)</span> <span class="math inline">\(^{**}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(-\)</span>VASP trajectory {% cite VASP %} <span class="math inline">\(^{*}\)</span> <span class="math inline">\(^{***}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(-\)</span><a href="https://isaacs.sourceforge.net">ISAACS</a> Project File {% cite ISAACS %}</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(-\)</span>PDB/ENT (Protein Data Bank) <span><strong><span>v3.30</span></strong></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(-\)</span>CIF (Crystallographic information)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(-\)</span>DL-POLY History file <span class="math inline">\(^{*}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><br />
+<span class="math inline">\(^{*}\)</span> including NPT trajectories.<br />
+<span class="math inline">\(^{**}\)</span> atomic units are assumed in the case of CPMD trajectories.<br />
+<span class="math inline">\(^{**}\)</span> and <span class="math inline">\(^{***}\)</span> require to enter extra parameters through an interactive dialog box:</p>
+<ul>
+<li><p>Total number of atoms</p></li>
+<li><p>Number of chemical species</p></li>
+<li><p>Label and number of each atomic species</p></li>
+</ul>
+<p>the input order, label and number of each atomic species will be the one assumed when reading the coordinates from the trajectory file.<br />
+<span><em><span><strong><span>Atomes</span></strong></span></em></span> can also export atomic coordinates in XYZ or Chem3D format.</p>
