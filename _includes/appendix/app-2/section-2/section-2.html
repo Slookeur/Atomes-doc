@@ -4,23 +4,36 @@
 <ul>
 <li><p>General options:</p>
 <ul>
-<li><p>"<span><code>-h</code></span>" or <span>–help</span>: short help.</p></li>
-<li><p>"<span><code>-v</code></span>" or <span>–version</span>: version information.</p></li>
+<li><p>"<span><code>-h</code></span>" or "<span><code>–help</code></span>": short help.</p></li>
+<li><p>"<span><code>-v</code></span>" or "<span><code>–version</code></span>": version information.</p></li>
 </ul></li>
 <li><p>File options:</p>
 <ul>
-<li><p>"<span><code>-awf filename</code></span>": open <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace file. <span class="math inline">\(^*\)</span> <span class="math inline">\(^{**}\)</span></p></li>
-<li><p>"<span><code>-apf filename</code></span>": open <span><em><span><strong><span>Atomes</span></strong></span></em></span> project file. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-xyz filename</code></span>": open coordinates in XYZ format. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-pdb filename</code></span>": open coordinates in PDB format. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-ent filename</code></span>": open coordinates in PDB format. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-c3d filename</code></span>": open coordinates in Chem3D format. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-cif filename</code></span>": open coordinates in CIF format. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-trj filename</code></span>": open CPMD trajectory. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-xdatcar filename</code></span>": open VASP trajectory. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-hist filename</code></span>": open DL_POLY history trajectory. <span class="math inline">\(^*\)</span></p></li>
-<li><p>"<span><code>-ipf filename</code></span>": open ISAACS project file. <span class="math inline">\(^*\)</span></p></li>
+<li><p>"<span><code>-awf filename</code></span>": open <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace file.</p></li>
+<li><p>"<span><code>-apf filename</code></span>": open <span><em><span><strong><span>Atomes</span></strong></span></em></span> project file.</p></li>
+<li><p>"<span><code>-xyz filename</code></span>": open coordinates in XYZ format {% cite XYZ %}.</p></li>
+<li><p>"<span><code>-pdb filename</code></span>": open coordinates in PDB format.</p></li>
+<li><p>"<span><code>-ent filename</code></span>": open coordinates in PDB format.</p></li>
+<li><p>"<span><code>-c3d filename</code></span>": open coordinates in Chem3D format {% cite Chem3D %}.</p></li>
+<li><p>"<span><code>-cif filename</code></span>": open coordinates in CIF format.</p></li>
+<li><p>"<span><code>-trj filename</code></span>": open CPMD trajectory {% cite CPMD %}.</p></li>
+<li><p>"<span><code>-xdatcar filename</code></span>": open VASP trajectory {% cite VASP %}.</p></li>
+<li><p>"<span><code>-hist filename</code></span>": open DL_POLY history trajectory {% cite DLPOLY %}.</p></li>
+<li><p>"<span><code>-ipf filename</code></span>": open ISAACS project file {% cite ISAACS %}.</p></li>
 </ul></li>
 </ul>
-<p><span class="math inline">\(^*\)</span> the structure of "<span><code>filename</code></span>" is expect to follow the structure introduced with the option (ex: "<span><code>-xyz</code></span>" for a file that contains coordinates in the XYZ format, but "<span><code>filename</code></span>" is not required to have the corresponding extention (ex: "<span><code>.xyz</code></span>").<br />
-<span class="math inline">\(^{**}\)</span> since <span><em><span><strong><span>Atomes</span></strong></span></em></span> has a single workspace only a single workspace can be opened by the command line.<br />
+<ol>
+<li><p>If no file option(s) is (are) provided then <span><em><span><strong><span>Atomes</span></strong></span></em></span> will try to open the file(s) based on its (their) extension (ex: a file which names end by "<span><code>.xyz</code></span>" will be assumed to follow the XYZ structure).</p></li>
+<li><p>The structure of "<span><code>filename</code></span>" is expected to follow the structure introduced with the option (ex: "<span><code>-xyz</code></span>" for a file that contains coordinates in the XYZ format, but "<span><code>filename</code></span>" is not required to have the corresponding extention (ex: "<span><code>.xyz</code></span>").</p></li>
+<li><p>Since <span><em><span><strong><span>Atomes</span></strong></span></em></span> has a single workspace only a single workspace file can be opened via the command line.</p></li>
+</ol>
+<ul>
+<li><p>Examples:</p>
+<ul>
+<li><p>Open all PDB files in the active directory:<br />
+"<span><code>user@localhost ]̃$ atomes *.pdb</code></span>"<br />
+</p></li>
+<li><p>Open a workspace file, and other coordinates files:<br />
+"<span><code>user@localhost ]̃$ atomes -pdb this file.awf -cif that *.xyz</code></span>"</p></li>
+</ul>
+<p>"<span><code>this</code></span>" is supposed to follow the PDB format, and "<span><code>that</code></span>" the CIF format.</p></li>
