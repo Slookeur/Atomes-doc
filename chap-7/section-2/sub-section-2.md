@@ -4,7 +4,7 @@ date: 2022-03-31
 maths: 1
 ---
 
-# The INFO section
+# CP2K~v9.1
 
 {% include chap-7/section-2/sub-section-2.html %}
 
