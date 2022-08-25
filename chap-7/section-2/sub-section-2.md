@@ -1,10 +1,10 @@
 ---
 sort: 2
-date: 2022-03-31
+date: 2022-08-25
 maths: 1
 ---
 
-# CP2K v9.1
+# CP2K
 
 {% include chap-7/section-2/sub-section-2.html %}
 
