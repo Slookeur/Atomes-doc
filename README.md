@@ -3,7 +3,7 @@
 ![](https://github.com/atomes/atomes-doc.io/workflows/ns/badge.svg)
 ![](https://www.codefactor.io/repository/github/atomes/atomes-doc/badge)
 
-***Atomes*** is developped by [Dr. Sébastien Le Roux][slr], research engineer for the [CNRS][cnrs]
+***Atomes*** is developed by [Dr. Sébastien Le Roux][slr], research engineer for the [CNRS][cnrs]
 
 <p align="center">
   <a href="https://www.cnrs.fr/"><img width="100" src="https://www.cnrs.fr/themes/custom/cnrs/logo.svg" alt="CNRS logo" align="center"></a>
