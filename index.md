@@ -31,11 +31,16 @@ You can also check the ***Atomes*** tutorials:
 
 - [Atomes tutorials][atomes-tuto]
 
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
 [slr]:https://www.ipcms.fr/sebastien-le-roux/
 [cnrs]:https://www.cnrs.fr/
 [ipcms]:https://www.ipcms.fr/
 [github]:https://github.com/
 [jekyll]:https://jekyllrb.com/
 [atomes]:https://atomes.ipcms.fr/
+[ccl]:http://creativecommons.org/licenses/by/3.0/deed.en_US
 [atomes-doc]:/Atomes-doc/atomes-manual.pdf
 [atomes-tuto]:/Atomes-tuto
