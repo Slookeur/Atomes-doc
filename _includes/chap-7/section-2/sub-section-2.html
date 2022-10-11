@@ -1,2 +1,14 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<p>The <span><em><span><strong><span>Atomes</span></strong></span></em></span> helper for the <a href="http://cp2k.berlios.de">CP2K</a> calculation offers to prepare input files for <span><strong><span>CP2K v9.1</span></strong></span>. Please note that the <a href="http://cp2k.berlios.de">CP2K</a> code offers so many calculation options that it is not possible either to provide a description or to offer a comprehensive usage guide for each of these options. Therefore the <a href="http://cp2k.berlios.de">CP2K</a> calculation assistant only provides help towards basics and / or frequently used calculation <span><em><span>ab-initio</span></em></span> options.<br />
+In any case if you intent to use the <a href="http://cp2k.berlios.de">CP2K</a> code please refer to the user manual:<br />
+<a href="https://www.cp2k.org/howto">https://www.cp2k.org/howto</a><br />
+The <span><em><span><strong><span>Atomes</span></strong></span></em></span> helper for the <a href="http://cp2k.berlios.de">CP2K</a> calculation provides a step by step interface to configure the different sections of the <a href="http://cp2k.berlios.de">CP2K</a> input file(s) for <span><em><span>ab-initio</span></em></span> calculations:</p>
+<h4 class="unnumbered" id="the-cp2k-input-structure-section">The "<span><code>CP2K input structure</code></span>" section</h4>
+<p>The CP2K input can be rather initimidating, you can decide at this stage either to have all input data gathered in a single file, or alternatively split in several, content orientated, files:</p>
+<h4 class="unnumbered" id="the-global-section">The "<span><code>GLOBAL</code></span>" section</h4>
+<p>Select the calculation to be performed, and some general options regarding the process.<br />
+Note that <span><em><span><strong><span>Atomes</span></strong></span></em></span> provides, when available, basis set(s) and pseudo-potential(s) from the CP2K database. Basis set(s) and pseudopotential(s) will be saved respectivelly in "<span><code>basis.inc</code></span>" and "<span><code>pseudo.inc</code></span>".</p>
+<h4 class="unnumbered" id="the-force_eval-section">The "<span><code>FORCE_EVAL</code></span>" section</h4>
+<p>Describe the details of the forces evaluation process.</p>
+<h4 class="unnumbered" id="the-subsys-section">The "<span><code>SUBSYS</code></span>" section</h4>

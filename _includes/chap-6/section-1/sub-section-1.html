@@ -19,8 +19,8 @@
 </div>
 </div>
 <p>The "<span><code>Crystal builder</code></span>" window [Fig. <a href="/Atomes-doc/chap-6/section-1/sub-section-1#crwin" data-reference-type="ref" data-reference="crwin">6.3</a>] allows the creation of crystalline structure(s) and super-structure(s). Thus not only atom(s) but also molecules can be inserted to the crystalline positions defined by the space group.<br />
-The "<span><code>Select ...</code></span>" menu allows in insert objects: atoms, molecules, and atom selections from any other project opened in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace. It will be presented in details in section <a href="/Atomes-doc/chap-6/section-1/sub-section-3#replsel" data-reference-type="ref" data-reference="replsel">6.1.3.4</a>, at the exception of the "<span><code>Empty site</code></span>" button unique to the "<span><code>Crystal builder</code></span>" and that will be introduced in the next pages related to the occupancy.<br />
-Each object will be inserted at the position specified using the fractional coordinates, in the proportion of the occupancy, and following the rules of the selected space group. The following parameters can be adjusted:</p>
+The "<span><code>Select ...</code></span>" menu allows to insert objects: atoms, molecules, and atom selections from any other project opened in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> workspace. It will be presented in details in section <a href="/Atomes-doc/chap-6/section-1/sub-section-2#replsel" data-reference-type="ref" data-reference="replsel">6.1.2.10</a>, at the exception of the "<span><code>Empty site</code></span>" button unique to the "<span><code>Crystal builder</code></span>" and that will be introduced in the next pages related to the occupancy.<br />
+Each object will be inserted at a position specified using the fractional coordinates, in the proportion of the occupancy, and following the rules of the selected space group. The following parameters can be adjusted:</p>
 <ol>
 <li><p><span id="cs" label="cs"></span> The crystal system:<br />
 </p>
@@ -88,8 +88,7 @@ Each object will be inserted at the position specified using the fractional coor
 <br /></figure>
 </div>
 </div>
-<p><br />
-The main information available is presented in the "<span><code>space group info</code></span>" dialog [Fig. <a href="/Atomes-doc/chap-6/section-1/sub-section-1#crinfo" data-reference-type="ref" data-reference="crinfo">6.4</a>], including the different setting(s), and the corresponding initial coordinates and Wyckoff positions.</p>
+<p>The main information available is presented in the "<span><code>space group info</code></span>" dialog [Fig. <a href="/Atomes-doc/chap-6/section-1/sub-section-1#crinfo" data-reference-type="ref" data-reference="crinfo">6.4</a>], including the different setting(s), and the corresponding initial coordinates and Wyckoff positions.</p>
 <h5 class="unnumbered" id="using-the-crystal-builder-building-crystals">Using the crystal builder: building crystal(s)</h5>
 <p>The following pages will present crystal building examples using the <span><strong><span>Fd<span class="math inline">\(\bar{3}\)</span>m</span></strong></span> (origin 1 setting) space group (diamond-like structure):<br />
 </p>
@@ -103,8 +102,7 @@ The main information available is presented in the "<span><code>space group info
 <br /></figure>
 </div>
 </div>
-<p><br />
-The following steps are required to build the C-diamond crystalline structure (see figure <a href="/Atomes-doc/chap-6/section-1/sub-section-1#diaminit" data-reference-type="ref" data-reference="diaminit">6.5</a>-left):</p>
+<p>The following steps are required to build the C-diamond crystalline structure (see figure <a href="/Atomes-doc/chap-6/section-1/sub-section-1#diaminit" data-reference-type="ref" data-reference="diaminit">6.5</a>-left):</p>
 <ul>
 <li><p>Select the <span><strong><span>Fd<span class="math inline">\(\bar{3}\)</span>m</span></strong></span> space group ("<span><code>Cubic -&gt; Face-centered -&gt; 227: Fd-3m</code></span>")</p></li>
 <li><p>Set the value for the lattice parameter: <span class="math inline">\(\simeq\)</span> 3.5 Å</p></li>
@@ -115,7 +113,7 @@ The following steps are required to build the C-diamond crystalline structure (s
 <p>The crystal is then displayed (see figure <a href="/Atomes-doc/chap-6/section-1/sub-section-1#diaminit" data-reference-type="ref" data-reference="diaminit">6.5</a>-right), also clones (atoms linked using the PBC see section <a href="/Atomes-doc/chap-5/section-1/sub-section-2#Clones" data-reference-type="ref" data-reference="Clones">5.1.2.3</a>) are immediately shown. The existence of a chemical bond depending on the cutoff(s), determined automatically when creating the crystal, you might need to adjust the values to define properly the bonding of the system.<br />
 </p></li>
 <li><p><span><strong><span><em>The C-diamond structure, playing with occupancy</em></span></strong></span>:<br />
-In these examples the parameters to build the crystal remain exactly similar to <a href="#cd1" data-reference-type="ref" data-reference="cd1">[cd1]</a>, only the total number of cell will be increased to 2 on <span><strong><span><em>a</em></span></strong></span>:</p>
+In these examples the parameters to build the crystal remain exactly similar to <a href="#cd1" data-reference-type="ref" data-reference="cd1">[cd1]</a>, only the total number of cells will be increased to 2 on <span><strong><span><em>a</em></span></strong></span>:</p>
 <div align="center">
 <p><img src="/Atomes-doc/img/edit/builder/diam2cells.png" style="width:8cm" alt="image" /></p>
 </div>
@@ -261,7 +259,7 @@ As already mentioned <span><em><span><strong><span>Atomes</span></strong></span>
 <br /></figure>
 </div>
 </div>
-<p>The "<span><code>Insert...</code></span>" menu allows indeed to insert fragments from the library of from any project opened in the workspace.<br />
+<p>The "<span><code>Insert...</code></span>" menu allows indeed to insert fragments from the library or from any project opened in the workspace.<br />
 Using C<span class="math inline">\(_{60}\)</span> fullerene molecules instead of carbon atoms (and increasing the lattice parameter appropriately) allows to obtain the structure illustrated in figure <a href="/Atomes-doc/chap-6/section-1/sub-section-1#c60build" data-reference-type="ref" data-reference="c60build">6.6</a>.<br />
 As for the atom(s) tweaking the occupancy can be useful with molecules:</p>
 <div align="center">
@@ -289,7 +287,7 @@ As mentioned using the "<span><code>Allow overlapping</code></span>" option allo
 </ul></li>
 </ol>
 <ul>
-<li><p><u>Crystal building</u>: for more on the crystal building process see appendix <a href="/Atomes-doc/appendix/app-3/" data-reference-type="ref" data-reference="cbp">3</a>.<br />
+<li><p><u>Crystal building</u>: for more on the crystal building process see appendix <a href="/Atomes-doc/appendix/app-4/" data-reference-type="ref" data-reference="cbp">4</a>.<br />
 Here are some important things happening when building a crystal in <span><em><span><strong><span>Atomes</span></strong></span></em></span>:</p>
 <ul>
 <li><p>At the beginning of the process the size of the object(s) to insert is compared to the lattice parameters, if the lattice parameters are considered too small a warning message will pop-up:</p>

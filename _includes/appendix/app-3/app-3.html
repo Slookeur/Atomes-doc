@@ -1,209 +1,66 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-<p>The crystal building process in <span><em><span><strong><span>Atomes</span></strong></span></em></span> will be briefly presented in the next pages. 2 example cases will be used to illustrate the methodology implemented in the program:</p>
-<ol>
-<li><p>The Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, with the first setting: origin 1.</p></li>
-<li><p>The R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, with the second setting: rhombohedral parameters.</p></li>
-</ol>
-<p>The terminology used in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program, and therefore used in this manual, is directly taken from the International tables for Crystallography Vol. A. {% cite IucrA %}<br />
-In the following every single step depends on the considered space group, and corresponds to the way the process is implemented in <span><em><span><strong><span>Atomes</span></strong></span></em></span>:</p>
-<ol>
-<li><p><span id="cb:1" label="cb:1"></span> Determine the origin of the coordinate system.</p></li>
-<li><p><span id="cb:2" label="cb:2"></span> Calculate the inverse transformation matrix.</p></li>
-<li><p><span id="cb:3" label="cb:3"></span> Select the space group extra site positions, if any.</p></li>
-<li><p><span id="cb:4" label="cb:4"></span> Adjust the different symmetrical positions of the first Wyckoff position using <a href="#cb:2" data-reference-type="ref" data-reference="cb:2">[cb:2]</a>.</p></li>
-<li><p><span id="cb:5" label="cb:5"></span> Calculate the crystalline positions using <a href="#cb:4" data-reference-type="ref" data-reference="cb:4">[cb:4]</a> and <a href="#cb:3" data-reference-type="ref" data-reference="cb:3">[cb:3]</a>.</p></li>
-<li><p><span id="cb:6" label="cb:6"></span> Select the unique position(s) in <a href="#cb:5" data-reference-type="ref" data-reference="cb:5">[cb:5]</a> to build the crystal.</p></li>
-<li><p>Calculate the object position in Cartesian coordinates using <a href="#cb:6" data-reference-type="ref" data-reference="cb:6">[cb:6]</a>.</p></li>
-<li><p>Insert object(s) at the appropriate coordinates based on occupancy.</p></li>
-</ol>
-<h3 class="unnumbered" id="origin-of-the-coordinate-system">Origin of the coordinate system</h3>
-<p>The origin of the coordinate system, if any particular, determine how the object fractional coordinates are modified to match the space group criteria before calculating the Cartesian coordinates. The first step is to build the 4<span class="math inline">\(\times\)</span>3 matrix that describe the operation of be performed, the required information is given by the space group setting, the easiest way to use it is on the form of the transformation matrix <span><strong><span>P</span></strong></span>:<br />
-Ex: (<span><strong><span>a, b, c</span></strong></span>) and can be converted in:<br />
-<span class="math display">\[\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; \quad 0 \\ 0 &amp; 1 &amp; 0 &amp; \quad 0 \\ 0 &amp; 0 &amp; 1 &amp; \quad 0 \end{array}\right]\]</span></p>
-<table>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span><strong><span>(1)</span></strong></span> Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, origin 1:</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span><strong><span>(2)</span></strong></span> R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, second setting:</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><img src="/Atomes-doc/img/a-cryst/Fd-3m.png" style="width:8cm" alt="image" /></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><img src="/Atomes-doc/img/a-cryst/R-3c.png" style="width:8cm" alt="image" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">(<span><strong><span>a</span></strong></span>-<span class="math inline">\(\frac{1}{8}\)</span>, <span><strong><span>b</span></strong></span>-<span class="math inline">\(\frac{1}{8}\)</span>, <span><strong><span>c</span></strong></span>-<span class="math inline">\(\frac{1}{8}\)</span>)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;">(<span class="math inline">\(\frac{2}{3}\)</span><span><strong><span>a</span></strong></span>+<span class="math inline">\(\frac{1}{3}\)</span><span><strong><span>b</span></strong></span>+<span class="math inline">\(\frac{1}{3}\)</span><span><strong><span>c</span></strong></span>, <span class="math inline">\(-\frac{1}{3}\)</span><span><strong><span>a</span></strong></span>+<span class="math inline">\(\frac{1}{3}\)</span><span><strong><span>b</span></strong></span>+<span class="math inline">\(\frac{1}{3}\)</span><span><strong><span>c</span></strong></span>, <span class="math inline">\(-\frac{1}{3}\)</span><span><strong><span>a</span></strong></span>-<span class="math inline">\(\frac{2}{3}\)</span><span><strong><span>b</span></strong></span>+<span class="math inline">\(\frac{1}{3}\)</span><span><strong><span>c</span></strong></span>)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">The corresponding <span><strong><span>P</span></strong></span> matrix are:</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; \quad -\frac{1}{8} \\ 0 &amp; 1 &amp; 0 &amp; \quad -\frac{1}{8} \\ 0 &amp; 0 &amp; 1 &amp; \quad -\frac{1}{8} \end{array}\right]\)</span></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} \frac{2}{3} &amp; -\frac{1}{3} &amp; -\frac{1}{3} &amp; \quad 0 \\ \frac{1}{3} &amp; \frac{1}{3} &amp; -\frac{2}{3} &amp; \quad 0 \\ \frac{1}{3} &amp; \frac{1}{3} &amp; \frac{1}{3} &amp; \quad 0 \end{array}\right]\)</span></td>
-</tr>
-</tbody>
-</table>
-<h3 class="unnumbered" id="inverse-transformation-matrix">Inverse transformation matrix</h3>
-<p>To transform the coordinates to the appropriate system we use the corresponding inverse matrix <span><strong><span>P</span></strong></span><span class="math inline">\(^{-1}\)</span>:<br />
+<p>The <span><em><span><strong><span>Atomes</span></strong></span></em></span> program includes a library with a number of molecules to be used when building or editing atomistic models:<br />
 </p>
-<table>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span><strong><span>(1)</span></strong></span> Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, origin 1:</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span><strong><span>(2)</span></strong></span> R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, second setting:</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; \quad -\frac{1}{8} \\ 0 &amp; 1 &amp; 0 &amp; \quad -\frac{1}{8} \\ 0 &amp; 0 &amp; 1 &amp; \quad -\frac{1}{8} \end{array}\right]\)</span></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 1 &amp; \quad 0 \\ -1 &amp; 1 &amp; 1 &amp; \quad 0 \\ 0 &amp; -1 &amp; 1 &amp; \quad 0 \end{array}\right]\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>The <span><strong><span>P</span></strong></span><span class="math inline">\(^{-1}\)</span> matrix allows to easily compute the coordinates <span class="math inline">\((x&#39;,y&#39;,z&#39;)\)</span> of a point <span class="math inline">\((x,y,z)\)</span> in the appropriate coordinate system using: <span class="math display">\[\label{sgconv}	(x&#39;,y&#39;,z&#39;) = {\bf{P}}^{-1} \times (x,y,z)\]</span></p>
-<h3 class="unnumbered" id="space-group-extra-site-positions">Space group extra site position(s)</h3>
-<p>The space group extra site position(s) describe translations to be performed on the initial set of Wyckoff position to get the entire list of coordinates.<br />
-The list of extra position(s), <span class="math inline">\(E(e_x,e_y,e_z)\)</span>, is imported from the space group data file, and is presented on top the Wyckoff positions table of the space group info window:<br />
-</p>
-<table>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span><strong><span>(1)</span></strong></span> Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, origin 1:</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span><strong><span>(2)</span></strong></span> R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, second setting:</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(+ (0,0,0) + (0,\frac{1}{2},\frac{1}{2}) + (\frac{1}{2},0,\frac{1}{2}) +  (\frac{1}{2},\frac{1}{2},0)\)</span></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\(+ (0,0,0) + (0,0,0) + (0,0,0)\)</span></td>
-</tr>
-</tbody>
-</table>
-<h3 class="unnumbered" id="symmetrical-positions-using-the-first-wyckoff-position">Symmetrical positions using the first Wyckoff position</h3>
-<p>The first step is to convert the list of coordinates from the first Wyckoff position on the form of matrix <span><strong><span>W</span></strong></span>:<br />
-</p>
-<table>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span><strong><span>(1)</span></strong></span> Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, origin 1:</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span><strong><span>(2)</span></strong></span> R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, second setting:</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">(x, y, z)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;">(x, y, z)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \end{array}\right]\)</span></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \end{array}\right]\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>The <span><strong><span>W’</span></strong></span> matrix, suitable for the calculation, is calculated using the <span><strong><span>P<span class="math inline">\(^{-1}\)</span></span></strong></span> matrix for the corresponding space group: <span class="math display">\[{\bf{W&#39;}} = {\bf{W}} \times {\bf{P^{-1}}}\]</span></p>
-<table>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span><strong><span>(1)</span></strong></span> Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, origin 1:</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span><strong><span>(2)</span></strong></span> R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, second setting:</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; \quad -\frac{1}{8} \\ 0 &amp; 1 &amp; 0 &amp; \quad -\frac{1}{8} \\ 0 &amp; 0 &amp; 1 &amp; \quad -\frac{1}{8} \end{array}\right]\)</span></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\(\left[\begin{array}{rrrr} 1 &amp; 1 &amp; 0 &amp; \quad 0 \\ -1 &amp; 1 &amp; 1 &amp; \quad 0 \\ 0 &amp; -1 &amp; 1 &amp; \quad 0 \end{array}\right]\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>The results, converted back to standard coordinates, are presented in the Wyckoff positions table of the space group info window:<br />
-</p>
-<table>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span><strong><span>(1)</span></strong></span> Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, origin 1:</td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span><strong><span>(2)</span></strong></span> R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, second setting:</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\((x - \frac{1}{8}, y - \frac{1}{8}, z - \frac{1}{8})\)</span></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\((x + z, - x + y + z, - y  + z)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
-</tr>
-</tbody>
-</table>
-<h3 class="unnumbered" id="object-positions">Object position(s)</h3>
-<p>The first step in getting the final fractional coordinates <span class="math inline">\(F(f_x, f_y, f_z)\)</span> of an object to insert with fractional coordinates given at input <span class="math inline">\(O(o_x, o_y, o_z)\)</span> is to convert its coordinates to the proper coordinates system <span class="math inline">\(O&#39;(o_x&#39;, o_y&#39;, o_z&#39;)\)</span>: <span class="math display">\[O&#39;(o_x&#39;, o_y&#39;, o_z&#39;) = {\bf{P}} \times O(o_x, o_y, o_z)\]</span> Then for a particular Wyckoff position <span><strong><span>W’</span></strong></span> and extra site position <span class="math inline">\(E(x,y,z)\)</span>, the final fractional coordinates <span class="math inline">\(F(f_x, f_y, f_z)\)</span> are calculated by: <span class="math display">\[F(f_x, f_y, f_z) = E(e_x,e_y,e_z) + {\bf{W&#39;}} \times O&#39;(o_x&#39;, o_y&#39;, o_z&#39;)\]</span></p>
-<h3 class="unnumbered" id="removing-duplicate-positions">Removing duplicate position(s)</h3>
-<p>Since one of the goal in <span><em><span><strong><span>Atomes</span></strong></span></em></span> is to build crystal structure of super-structure to work with, all crystalline positions cannot be conserved and duplicate positions (same positions using the periodic boundary conditions) must be removed.<br />
-When final positions <span class="math inline">\(F(f_x, f_y, f_z)\)</span> are calculated duplicates are removed on the fly. The first final position with a unique set of coordinates <span class="math inline">\(F(f_x, f_y, f_z)\)</span> is preserved while the others will be ignored. Duplicates are identical set of atomic coordinates, that can be found because of the symmetrical properties of the space group.<br />
-In <span><em><span><strong><span>Atomes</span></strong></span></em></span> a duplicate position <span class="math inline">\(F_b(b_x, b_y, b_z)\)</span> will be removed if <span class="math inline">\(F_a(a_x, a_y, a_z)\)</span> has already been found and providing that:<br />
-</p>
+<div id="libinat">
 <div align="center">
-<table>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{bmatrix} a_x &amp; = &amp; b_x &amp; \bf{or} &amp; abs(a_x - b_x) &amp; = &amp; n, n \text{ integer} \end{bmatrix}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span><strong><span>and</span></strong></span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{bmatrix} a_y &amp; = &amp; b_y &amp; \bf{or} &amp; abs(a_y - b_y) &amp; = &amp; n, n \text{ integer} \end{bmatrix}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span><strong><span>and</span></strong></span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{bmatrix}a_z &amp; = &amp; b_z &amp; \bf{or} &amp; abs(a_z - b_z) &amp; = &amp; n, n \text{ integer} \end{bmatrix}\)</span></td>
-</tr>
-</tbody>
-</table>
+<figure>
+<img src="/Atomes-doc/img/edit/atoms/library.png" id="libinat" style="width:12cm" alt="The &quot;Library&quot; dialog of the Atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 3.1:</span></strong> The "<span><code>Library</code></span>" dialog of the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program.</figcaption>
+<br /></figure>
 </div>
-<h3 class="unnumbered" id="calculate-the-object-final-positions-in-cartesian-coordinates">Calculate the object final position(s) in Cartesian coordinates</h3>
-<p>After the construction/selection process Cartesian coordinates <span class="math inline">\(C(c_x, c_y, c_z)\)</span> of an object with fractional coordinates <span class="math inline">\(F(f_x, f_y, f_z)\)</span> are calculated using: <span class="math display">\[C(c_x, c_y, c_z) = {\bf{FtC}} \times F(f_x, f_y, f_z)\]</span> with <span><strong><span>FtC</span></strong></span> the fractional to Cartesian conversion matrix is defined by: <span class="math display">\[\begin{bmatrix}
- \bf{a} &amp; \bf{b}\cos{\gamma}  &amp; \bf{c}\cos{\beta} \\
- 0 &amp; \bf{b}\sin{\gamma} &amp; \bf{c}\omega \\
- 0 &amp; 0 &amp; \frac{\Omega}{\bf{ab}\sin{\gamma}}
-\end{bmatrix}\]</span> where <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\Omega\)</span> are respectively: <span class="math display">\[\omega = \frac{\cos{\alpha} - \cos{\beta}\cos{\gamma}}{\sin{\gamma}}\]</span> and: <span class="math display">\[\Omega = \bf{abc}\sqrt{1-\cos^2{\alpha} -\cos^2{\beta} -\cos^2{\gamma} + 2\cos{\alpha}\cos{\beta}\cos{\gamma}}\]</span><br />
-<span><strong><span>a, b, c</span></strong></span> and <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> are the lattice parameters provided at input.</p>
-<h3 class="unnumbered" id="occupancy">Occupancy</h3>
-<p>The only thing left to do after that it to select which set of coordinates are to be occupied among the list prepared in the previous steps. Depending on the occupancy defined at input <span><em><span><strong><span>Atomes</span></strong></span></em></span> does the following:</p>
+</div>
+<p>Available molecules can be found in the library by sorted in the following families:<br />
+</p>
 <ul>
-<li><p>If the occupancy is equal to 1.0: all coordinates are to be occupied and no particular selection is performed.</p></li>
-<li><p>If the occupancy is &lt; 1.0, then the following options are possible to handle occupancy:</p>
-<ol>
-<li><p><span id="i" label="i"></span> "<span><code>Random for the initial cell only</code></span>": sites are filled randomly in the initial cell only, then the initial cell is simply replicated.</p></li>
-<li><p><span id="ii" label="ii"></span> "<span><code>Random cell by cell</code></span>": sites are filled randomly for each cell, cell by cell separately.</p></li>
-<li><p><span id="iii" label="iii"></span> "<span><code>Completely random</code></span>": sites are filled randomly for the entire network, the final crystal is considered as whole.</p></li>
-<li><p><span id="iv" label="iv"></span> "<span><code>Successively</code></span>": sites are filled successively, all object(s) A are inserted (for the first <span class="math inline">\(n(A)\)</span> positions), then all object(s) B are inserted (for the next <span class="math inline">\(n(B)\)</span> positions) ...</p></li>
-<li><p><span id="v" label="v"></span> "<span><code>Alternatively</code></span>": sites are filled alternatively: object A is inserted on the first position, object B is inserted on the second position, object A on the third position, object B on the fourth position ... and so on.</p></li>
-</ol>
-<p>For <a href="#i" data-reference-type="ref" data-reference="i">[i]</a>, <a href="#ii" data-reference-type="ref" data-reference="ii">[ii]</a>, <a href="#iv" data-reference-type="ref" data-reference="iv">[iv]</a> and <a href="#v" data-reference-type="ref" data-reference="v">[v]</a> the number of object(s) by cell is constant, but it can vary for <a href="#iii" data-reference-type="ref" data-reference="iii">[iii]</a>.<br />
-For <a href="#iv" data-reference-type="ref" data-reference="iv">[iv]</a> and <a href="#v" data-reference-type="ref" data-reference="v">[v]</a> the order of the positions to be filled is the order they are found in during the previous steps.</p></li>
+<li><p>Misc</p></li>
+<li><p>Alcohols</p></li>
+<li><p>Aldehydes</p></li>
+<li><p>Alkanes</p></li>
+<li><p>Alkenes</p></li>
+<li><p>Alkynes</p></li>
+<li><p>Amides</p></li>
+<li><p>Amines</p></li>
+<li><p>Amino acids</p></li>
 </ul>
-<h3 class="unnumbered" id="final-check-distances-between-inserted-objects">Final check: distance(s) between inserted objects</h3>
-<p>Finally the last calculation performed by <span><em><span><strong><span>Atomes</span></strong></span></em></span> when creating the crystal is distance check between the object(s) be inserted. Note that this check performed, if and only if, no <span><em><span>overlapping</span></em></span> is allowed.<br />
-If any distance <span class="math inline">\(d_{ab}\)</span> between 2 objects <span><em><span>a</span></em></span> and <span><em><span>b</span></em></span>, is found to be <span><em><span>too small</span></em></span> the following can happen:</p>
-<ol>
-<li><p>If <span class="math inline">\(d_{ab} &lt; 0.5\)</span> Å then a warning message will pop-up and ask for the user confirmation to continue, or not, to build the crystal.</p></li>
-<li><p>If the user decides to build the crystal anyway and if <span class="math inline">\(d_{ab} = 0.0\)</span> then for fail safe reasons object <span class="math inline">\(b\)</span> is removed from the list to build.</p></li>
-</ol>
-<h3 class="unnumbered" id="the-sgl-space-group-info-xml-file-format">The "<span><code>SGL</code></span>" "Space group info XML file" format</h3>
-<p>The data files that contain the information regarding each of the 230 space groups are located in the "<span><code>bin/library/space_groups</code></span>" directory.<br />
-In this folder to each space group corresponds a file with a name following the construction:</p>
-<div align="center">
-<p>"<span><code>space group number</code></span>"-"<span><code>space group name</code></span>"."<span><code>sgl</code></span>"</p>
-</div>
-<p>For the Fd<span class="math inline">\(\bar{3}\)</span>m space group, the corresponding file is "<span><code>227-Fd-3m.sgl</code></span>".<br />
-These files must have the "<span><code>.sgl</code></span>" extension, follow the "<span><code>XML</code></span>" encoding rules, and the following structure:<br />
+<ul>
+<li><p>Aromatics</p></li>
+<li><p>Carboxylic acids</p></li>
+<li><p>Cyclic alkanes</p></li>
+<li><p>Cyclic alkenes</p></li>
+<li><p>Ethers</p></li>
+<li><p>Fatty acids</p></li>
+<li><p>Fullerenes</p></li>
+<li><p>Heterocyclics</p></li>
+<li><p>Macrocycles</p></li>
+</ul>
+<ul>
+<li><p>Ketones</p></li>
+<li><p>Nitriles</p></li>
+<li><p>Nucleobases</p></li>
+<li><p>Steroids</p></li>
+<li><p>Sugars (Linears)</p></li>
+<li><p>Sugars (Cyclics)</p></li>
+<li><p>Sulfoxides</p></li>
+<li><p>Thiols</p></li>
+</ul>
+<p>Each time a new molecule is selected in the tree view on the left side of the window (see figure <a href="/Atomes-doc/appendix/app-3#libinat" data-reference-type="ref" data-reference="libinat">3.1</a>), then the right side of the "<span><code>Library</code></span>" dialog is refreshed with the data of the newly selected molecule. The data includes a 3D representation included in an active OpenGL window that allows to rotate the molecule:<br />
 </p>
+<div id="libex">
+<div align="center">
+<figure>
+<img src="/Atomes-doc/img/lib/libex.png" id="libex" style="width:15cm" alt="Using the &quot;Library&quot; dialog." />
+<figcaption aria-hidden="true"><strong><span>Figure 3.2:</span></strong> Using the "<span><code>Library</code></span>" dialog.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p>The data files that contain the information regarding each molecule in the library are located in the "<span><code>bin/library/molecules</code></span>" directory.<br />
+To each molecule that appears in the "<span><code>Library</code></span>" tree view, a file with the "<span><code>.sml</code></span>" extension can be found in the corresponding family subfolder.<br />
+For the example in figure <a href="/Atomes-doc/appendix/app-3#libex" data-reference-type="ref" data-reference="libex">3.2</a>:</p>
+<ul>
+<li><p>The family is: "<span><code>Aromatics</code></span>"</p></li>
+<li><p>The molecule is: "<span><code>Caffeine</code></span>"</p></li>
+<li><p>The corresponding file is: "<span><code>Aromatics/caffeine.sml</code></span>".</p></li>
+</ul>
+<p>New files can be added to the library to be found by <span><em><span><strong><span>Atomes</span></strong></span></em></span> at startup, providing that the new files are added to one of the families of the library. These files must have the "<span><code>.sml</code></span>" extension, follow the "<span><code>XML</code></span>" encoding rules, and the following structure:</p>
+<h3 class="unnumbered" id="the-scl-simple-chemical-library-xml-file-format">The "<span><code>SCL</code></span>" "Simple chemical library XML file" format</h3>

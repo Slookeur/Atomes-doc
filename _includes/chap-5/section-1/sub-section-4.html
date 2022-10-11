@@ -20,8 +20,7 @@
 <br /></figure>
 </div>
 </div>
-<p><br />
-Each tab contains the respective measured properties for all the atoms in selection (see section <a href="/Atomes-doc/chap-5/section-2/" data-reference-type="ref" data-reference="mviz">5.2</a> for more information on the selection process), this means the atoms that have been selected before opening the dialog, or, while it is opened and the tabs will refresh. The tabs read as follow:</p>
+<p>Each tab contains the respective measured properties for all the atoms in selection (see section <a href="/Atomes-doc/chap-5/section-2/" data-reference-type="ref" data-reference="mviz">5.2</a> for more information on the selection process), this means the atoms that have been selected before opening the dialog, or, while it is opened and the tabs will refresh. The tabs read as follow:</p>
 <ul>
 <li><p>First (2/3/4) columns the atoms id’s</p></li>
 <li><p>Column (3/4/5): the value measured in the model</p></li>
@@ -43,6 +42,27 @@ Each tab contains the respective measured properties for all the atoms in select
 </div></li>
 <li><p>No visual information is available for the dihedral angles and only the numerical values are provided.</p></li>
 </ol>
+<h5 class="unnumbered" id="volw">The "<span><code>Volumes</code></span>" dialog</h5>
+<p>Pressing the "<span><code>Volumes</code></span>" button will open the "<span><code>Volumes</code></span>" dialog [Fig. <a href="/Atomes-doc/chap-5/section-1/sub-section-4#mvols" data-reference-type="ref" data-reference="mvols">5.12</a>], that contains a notebook with 3 tabs, for overall atomic volumes ("<span><code>Model</code></span>"), isolated fragment volumes ("<span><code>Fragment(s)</code></span>"), molecular volume ("<span><code>Molecule(s)</code></span>").</p>
+<div id="mvols">
+<div align="center">
+<figure>
+<img src="/Atomes-doc/img/visu/wvols/vol-tabs.png" id="mvols" style="width:16.5cm" alt="The &quot;Volumes&quot; dialog in the Atomes program, with the &quot;Model&quot;, &quot;Fragment(s)&quot; and &quot;Molecule(s)&quot; tabs." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.12:</span></strong> The "<span><code>Volumes</code></span>" dialog in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program, with the "<span><code>Model</code></span>", "<span><code>Fragment(s)</code></span>" and "<span><code>Molecule(s)</code></span>" tabs.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+Tabs are divided in two parts: top for molecular volume(s) calculated for the respective target, bottom for calculations to dermine the smallest rectangle parallepiped volume for the respective target. Also volumes can be evalutated for different types of atomic radii (covalent, ionic, van Der Waals and in crystal), and on the first tab ("<span><code>Volumes</code></span>"), the angular precision (rotation of the volume) can be fine tuned for all calculations.<br />
+Once a "<span><code>Compute</code></span>" button is pressed the selected calculation will be perfomed, then numerical results become available and can be visualized pressing the corresponding "<span><code>Show/Hide</code></span>" button:</p>
+<div id="mvolres">
+<div align="center">
+<figure>
+<img src="/Atomes-doc/img/visu/wvols/vol-viz.png" id="mvolres" style="width:16.5cm" alt="Volumes visualization in the Atomes program: smallest rectangle parallepiped volumes found for each of the isolated fragment in molecule 1." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.13:</span></strong> Volumes visualization in the <span><em><span><strong><span>Atomes</span></strong></span></em></span> program: smallest rectangle parallepiped volumes found for each of the isolated fragment in molecule 1.</figcaption>
+<br /></figure>
+</div>
+</div>
 <h5 class="unnumbered" id="the-mouse-mode-menu">The "<span><code>Mouse mode</code></span>" menu</h5>
 <p>This menu allows to switch the mouse mode between "<span><code>Analysis</code></span>" (default) and "<span><code>Edition</code></span>". This menu is active, only and only if, there is a single configuration in the project (and not a molecular dynamics trajectory). Therefore when studying a MD trajectory only the "<span><code>Analysis</code></span>" mode is available.</p>
 <h5 class="unnumbered" id="the-selection-mode-menu">The "<span><code>Selection mode</code></span>" menu</h5>
