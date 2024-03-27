@@ -41,6 +41,5 @@ You can also check the ***Atomes*** tutorials:
 [github]:https://github.com/
 [jekyll]:https://jekyllrb.com/
 [atomes]:https://atomes.ipcms.fr/
-[ccl]:http://creativecommons.org/licenses/by/3.0/deed.en_US
 [atomes-doc]:atomes-manual.pdf
 [atomes-tuto]:/Atomes-tuto
