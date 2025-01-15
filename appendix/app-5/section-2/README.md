@@ -1,10 +1,10 @@
 ---
 sort: 2
-date: 2024-10-30
+date: 2025-01-15
 maths: 1
 ---
 
-# Radial distribution functions fundamentals
+# Radial distribution functions
 
 {% include appendix/app-5/section-2/section-2.html %}
 
