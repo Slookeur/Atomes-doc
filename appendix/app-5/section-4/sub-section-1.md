@@ -1,6 +1,8 @@
 ---
-sort: 1
-date: 2025-01-15
+title: Average first coordination numbers
+parent:  Local atomic coordination properties
+nav_order: 1
+date: 2025-04-04
 maths: 1
 ---
 

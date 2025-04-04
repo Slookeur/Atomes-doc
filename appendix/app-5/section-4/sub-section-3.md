@@ -1,6 +1,8 @@
 ---
-sort: 3
-date: 2025-01-15
+title: Proportion of tetrahedral links and units in the structure model
+parent:  Local atomic coordination properties
+nav_order: 3
+date: 2025-04-04
 maths: 1
 ---
 

@@ -1,6 +1,8 @@
 ---
-sort: 5
-date: 2025-01-15
+title: Bond defects in ring statistics
+parent:  Ring statistics
+nav_order: 5
+date: 2025-04-04
 maths: 1
 ---
 

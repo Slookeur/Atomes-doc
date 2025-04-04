@@ -13,7 +13,7 @@
 <p>Using the "<span><code>Style</code></span>" menu it is possible to define to <span><strong>default style</strong></span> of the model representation, the options are among the most commonly used in chemistry. Changing the <span><strong>default style</strong></span> from this menu will update several parts of the OpenGL window and associated menus. For instance selecting the "<span><code>Ball and stick</code></span>" option will update the first tab of "<span><code>Atom(s) configuration</code></span>" dialog [Fig. <a href="/Atomes-doc/chap-5/section-1/sub-section-2#advats" data-reference-type="ref" data-reference="advats">5.6</a>] to display atomic radius and the "<span><code>Bond(s)</code></span>" menu [Fig. <a href="/Atomes-doc/chap-5/section-1/sub-section-2#modl" data-reference-type="ref" data-reference="modl">5.5</a>] to present the "<span><code>Radius(ii)</code></span>" and offer a shortcut to modify their values.<br />
 It is possible to define local style(s) to improve the visual representation, however this is only possible using the mouse, see section <a href="/Atomes-doc/chap-5/section-2/sub-section-2#mstyle" data-reference-type="ref" data-reference="mstyle">5.2.2.1</a>, and changing the <span><strong>default style</strong></span> of the model using the "<span><code>Style</code></span>" menu will reset/erase any local style(s) value(s) to the default.</p>
 <h5 id="csm">The "<span><code>Color scheme(s)</code></span>" menu</h5>
-<p>In the <span><em><span><strong>Atomes</strong></span></em></span> program when the file is opened most of the bonding properties are calculated "on-the-fly", allowing to gain insights on the atomic coordinations, as well as the number of fragments and the different molecules in the model.<br />
+<p>In the <span><strong>atomes</strong></span> program when the file is opened most of the bonding properties are calculated "on-the-fly", allowing to gain insights on the atomic coordinations, as well as the number of fragments and the different molecules in the model.<br />
 Therefore before using the "<span><code>Color scheme(s)</code></span>" menu it is important to be familiar with the following definitions:</p>
 <ul>
 <li><p><span><strong>Total coordination</strong></span> = total number of first neighbor atoms around the atom.</p></li>
@@ -34,7 +34,7 @@ The colors of each objects can be modified/adapted via the appropriate menus/dia
 </div>
 </div>
 <h5 class="unnumbered" id="using-a-custom-color-map">Using a custom color map</h5>
-<p>Alternatively to the CMs proposed by the <span><em><span><strong>Atomes</strong></span></em></span> program it is possible to apply a user defined CM to the OpenGL model, this option is accessible via the "<span><code>Custom</code></span>" button of the "<span><code>Atoms &amp; bonds</code></span>" menu [Fig. <a href="/Atomes-doc/chap-5/section-1/sub-section-1#mogl" data-reference-type="ref" data-reference="mogl">5.2</a>-b]. In that case it is required to read a file (having the extension "*.dat") that contains the numerical data to be used as color scale. This file must be a simple (Unix like) text file with as many lines as:</p>
+<p>Alternatively to the CMs proposed by the <span><strong>atomes</strong></span> program it is possible to apply a user defined CM to the OpenGL model, this option is accessible via the "<span><code>Custom</code></span>" button of the "<span><code>Atoms &amp; bonds</code></span>" menu [Fig. <a href="/Atomes-doc/chap-5/section-1/sub-section-1#mogl" data-reference-type="ref" data-reference="mogl">5.2</a>-b]. In that case it is required to read a file (having the extension "*.dat") that contains the numerical data to be used as color scale. This file must be a simple (Unix like) text file with as many lines as:</p>
 <div align="center">
 <p><span><strong>Total number of MD steps <span class="math inline">\(\times\)</span> Total number of atoms</strong></span></p>
 </div>
@@ -50,7 +50,7 @@ An example is provided hereafter for the silica glass model:<br />
 <div align="center">
 <p><img src="/Atomes-doc/img/visu/cmap/custom.png" style="width:6cm" alt="image" /></p>
 </div></li>
-<li><p><span><strong>(a)</strong></span> The "<span><code>Import / Save data</code></span>" button allows to import your data file to create the color map. If the data file is processed successfully then <span><em><span><strong>Atomes</strong></span></em></span> will propose to use it and a confirmation dialog will pop-up:</p>
+<li><p><span><strong>(a)</strong></span> The "<span><code>Import / Save data</code></span>" button allows to import your data file to create the color map. If the data file is processed successfully then <span><strong>atomes</strong></span> will propose to use it and a confirmation dialog will pop-up:</p>
 <div align="center">
 <p><img src="/Atomes-doc/img/visu/cmap/custom-read.png" style="width:8cm" alt="image" /></p>
 </div>
@@ -75,7 +75,7 @@ An example is provided hereafter for the silica glass model:<br />
 <div align="center">
 <p><img src="/Atomes-doc/img/visu/cmap/sio2-custom.png" style="width:14cm" alt="image" /></p>
 </div></li>
-<li><p>The "<span><code>Custom</code></span>" data and the corresponding color map are saved within the <span><em><span><strong>Atomes</strong></span></em></span> project and workspace files (see section <a href="/Atomes-doc/chap-3/section-3/sub-section-2" data-reference-type="ref" data-reference="apf">3.3.2</a> and <a href="/Atomes-doc/chap-3/section-3/sub-section-3" data-reference-type="ref" data-reference="awf">3.3.3</a>), so that it will not be require to load a prepare the color map between work sessions.</p></li>
+<li><p>The "<span><code>Custom</code></span>" data and the corresponding color map are saved within the <span><strong>atomes</strong></span> project and workspace files (see section <a href="/Atomes-doc/chap-3/section-3/sub-section-2" data-reference-type="ref" data-reference="apf">3.3.2</a> and <a href="/Atomes-doc/chap-3/section-3/sub-section-3" data-reference-type="ref" data-reference="awf">3.3.3</a>), so that it will not be require to load a prepare the color map between work sessions.</p></li>
 </ol>
 <h5 id="material-and-lights">Material and lights</h5>
 <p>The "<span><code>Material and lights</code></span>" button of the "<span><code>OpenGL</code></span>" menu opens the "<span><code>OpenGL material aspect and light settings</code></span>" dialog [Fig. <a href="/Atomes-doc/chap-5/section-1/sub-section-1#advogl" data-reference-type="ref" data-reference="advogl">5.4</a>]:<br />
@@ -83,8 +83,8 @@ An example is provided hereafter for the silica glass model:<br />
 <div id="advogl">
 <div align="center">
 <figure>
-<img src="/Atomes-doc/img/visu/adv-ogl.png" id="advogl" style="width:17cm" alt="The &quot;OpenGL material aspect and light settings&quot; dialog in the Atomes program." />
-<figcaption aria-hidden="true"><strong><span>Figure 5.4:</span></strong> The "<span><code>OpenGL material aspect and light settings</code></span>" dialog in the <span><em><span><strong>Atomes</strong></span></em></span> program.</figcaption>
+<img src="/Atomes-doc/img/visu/adv-ogl.png" id="advogl" style="width:17cm" alt="The &quot;OpenGL material aspect and light settings&quot; dialog in the atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 5.4:</span></strong> The "<span><code>OpenGL material aspect and light settings</code></span>" dialog in the <span><strong>atomes</strong></span> program.</figcaption>
 <br /></figure>
 </div>
 </div>

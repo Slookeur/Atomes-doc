@@ -1,6 +1,8 @@
 ---
-sort: 2
-date: 2025-01-15
+title: Plot edition
+parent:  Data and plot edition
+nav_order: 2
+date: 2025-04-04
 maths: 1
 ---
 

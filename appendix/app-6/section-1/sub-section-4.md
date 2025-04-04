@@ -1,6 +1,8 @@
 ---
-sort: 4
-date: 2025-01-15
+title: Shannon radii in crystal
+parent:  Atomic radii
+nav_order: 4
+date: 2025-04-04
 maths: 1
 ---
 

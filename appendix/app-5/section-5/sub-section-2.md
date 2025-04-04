@@ -1,6 +1,8 @@
 ---
-sort: 2
-date: 2025-01-15
+title: Definitions
+parent:  Ring statistics
+nav_order: 2
+date: 2025-04-04
 maths: 1
 ---
 

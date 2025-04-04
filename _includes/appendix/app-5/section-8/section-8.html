@@ -10,7 +10,7 @@ However, during the analysis of the results of molecular dynamics simulations it
 MSD(t)\ =\ \left\langle \left|{\bf{r}}_{i}(t)-{\bf{r}}_{i}(0) - \left[{\bf{r}}_{cm}(t)-{\bf{r}}_{cm}(0)\right]\right|^{2}  \right\rangle\]</span> where <span class="math inline">\({\bf{r}}_{cm}\)</span>(t) represents the position of the center of mass of the system at the time <span class="math inline">\(t\)</span>.<br />
 The MSD also contains information on the diffusion of atoms. If the system is solid (frozen) then MSD "saturate", and the kinetic energy is not sufficient enough to reach a diffusive behavior. Nevertheless if the system is not frozen (e.g. liquid) then the MSD will grow linearly in time. In such a case it is possible to investigate the behavior of the system looking at the slope of the MSD. The slope of the MSD or the so called diffusion constant D is defined by: <span class="math display">\[\label{dyna3}
 D\ =\ \lim_{t \to \infty}\ \frac{1}{6t}\ \langle {\bf{r}}^{2}(t) \rangle\]</span><br />
-<span><em><span><strong>Atomes</strong></span></em></span> provides access to the several MSD related functions:</p>
+<span><strong>atomes</strong></span> provides access to the several MSD related functions:</p>
 <ul>
 <li><p>MSD for each chemical species with autocorrelation on all the dynamics</p></li>
 <li><p>MSD for each chemical species without autocorrelation on all the dynamics (step by step)</p></li>

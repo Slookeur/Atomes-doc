@@ -1,6 +1,8 @@
 ---
-sort: 1
-date: 2025-01-15
+title: The Crystal builder window
+parent:  The Edit submenu
+nav_order: 1
+date: 2025-04-04
 maths: 1
 ---
 

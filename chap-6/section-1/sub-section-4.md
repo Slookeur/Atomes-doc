@@ -1,6 +1,8 @@
 ---
-sort: 4
-date: 2025-01-15
+title: The Extract/rebuild buttons
+parent:  The Edit submenu
+nav_order: 4
+date: 2025-04-04
 maths: 1
 ---
 

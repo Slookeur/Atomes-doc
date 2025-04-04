@@ -1,6 +1,8 @@
 ---
-sort: 5
-date: 2025-01-15
+title: The View menu
+parent:  Window top bar menu
+nav_order: 5
+date: 2025-04-04
 maths: 1
 ---
 

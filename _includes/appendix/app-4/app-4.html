@@ -1,12 +1,12 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-<p>The crystal building process in <span><em><span><strong>Atomes</strong></span></em></span> will be briefly presented in the next pages. 2 example cases will be used to illustrate the methodology implemented in the program:</p>
+<p>The crystal building process in <span><strong>atomes</strong></span> will be briefly presented in the next pages. 2 example cases will be used to illustrate the methodology implemented in the program:</p>
 <ol>
 <li><p>The Fd<span class="math inline">\(\bar{3}\)</span>m space group, N<span class="math inline">\(^\circ\)</span>227, with the first setting: origin 1.</p></li>
 <li><p>The R<span class="math inline">\(\bar{3}\)</span>c space group, N<span class="math inline">\(^\circ\)</span>167, with the second setting: rhombohedral parameters.</p></li>
 </ol>
-<p>The terminology used in the <span><em><span><strong>Atomes</strong></span></em></span> program, and therefore used in this manual, is directly taken from the International tables for Crystallography Vol. A. {% cite IucrA %}<br />
-In the following every single step depends on the considered space group, and corresponds to the way the process is implemented in <span><em><span><strong>Atomes</strong></span></em></span>:</p>
+<p>The terminology used in the <span><strong>atomes</strong></span> program, and therefore used in this manual, is directly taken from the International tables for Crystallography Vol. A. {% cite IucrA %}<br />
+In the following every single step depends on the considered space group, and corresponds to the way the process is implemented in <span><strong>atomes</strong></span>:</p>
 <ol>
 <li><p><span id="cb:1" label="cb:1"></span> Determine the origin of the coordinate system.</p></li>
 <li><p><span id="cb:2" label="cb:2"></span> Calculate the inverse transformation matrix.</p></li>
@@ -147,9 +147,9 @@ The list of extra position(s), <span class="math inline">\(E(e_x,e_y,e_z)\)</spa
 <h3 class="unnumbered" id="object-positions">Object position(s)</h3>
 <p>The first step in getting the final fractional coordinates <span class="math inline">\(F(f_x, f_y, f_z)\)</span> of an object to insert with fractional coordinates given at input <span class="math inline">\(O(o_x, o_y, o_z)\)</span> is to convert its coordinates to the proper coordinates system <span class="math inline">\(O&#39;(o_x&#39;, o_y&#39;, o_z&#39;)\)</span>: <span class="math display">\[O&#39;(o_x&#39;, o_y&#39;, o_z&#39;) = {\bf{P}} \times O(o_x, o_y, o_z)\]</span> Then for a particular Wyckoff position <span><strong>W’</strong></span> and extra site position <span class="math inline">\(E(x,y,z)\)</span>, the final fractional coordinates <span class="math inline">\(F(f_x, f_y, f_z)\)</span> are calculated by: <span class="math display">\[F(f_x, f_y, f_z) = E(e_x,e_y,e_z) + {\bf{W&#39;}} \times O&#39;(o_x&#39;, o_y&#39;, o_z&#39;)\]</span></p>
 <h3 class="unnumbered" id="removing-duplicate-positions">Removing duplicate position(s)</h3>
-<p>Since one of the goal in <span><em><span><strong>Atomes</strong></span></em></span> is to build crystal structure of super-structure to work with, all crystalline positions cannot be conserved and duplicate positions (same positions using the periodic boundary conditions) must be removed.<br />
+<p>Since one of the goal in <span><strong>atomes</strong></span> is to build crystal structure of super-structure to work with, all crystalline positions cannot be conserved and duplicate positions (same positions using the periodic boundary conditions) must be removed.<br />
 When final positions <span class="math inline">\(F(f_x, f_y, f_z)\)</span> are calculated duplicates are removed on the fly. The first final position with a unique set of coordinates <span class="math inline">\(F(f_x, f_y, f_z)\)</span> is preserved while the others will be ignored. Duplicates are identical set of atomic coordinates, that can be found because of the symmetrical properties of the space group.<br />
-In <span><em><span><strong>Atomes</strong></span></em></span> a duplicate position <span class="math inline">\(F_b(b_x, b_y, b_z)\)</span> will be removed if <span class="math inline">\(F_a(a_x, a_y, a_z)\)</span> has already been found and providing that:<br />
+In <span><strong>atomes</strong></span> a duplicate position <span class="math inline">\(F_b(b_x, b_y, b_z)\)</span> will be removed if <span class="math inline">\(F_a(a_x, a_y, a_z)\)</span> has already been found and providing that:<br />
 </p>
 <div align="center">
 <table>
@@ -177,7 +177,7 @@ In <span><em><span><strong>Atomes</strong></span></em></span> a duplicate posit
 \end{bmatrix}\]</span> where <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\Omega\)</span> are respectively: <span class="math display">\[\omega = \frac{\cos{\alpha} - \cos{\beta}\cos{\gamma}}{\sin{\gamma}}\]</span> and: <span class="math display">\[\Omega = \bf{abc}\sqrt{1-\cos^2{\alpha} -\cos^2{\beta} -\cos^2{\gamma} + 2\cos{\alpha}\cos{\beta}\cos{\gamma}}\]</span><br />
 <span><strong>a, b, c</strong></span> and <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> are the lattice parameters provided at input.</p>
 <h3 class="unnumbered" id="occupancy">Occupancy</h3>
-<p>The only thing left to do after that it to select which set of coordinates are to be occupied among the list prepared in the previous steps. Depending on the occupancy defined at input <span><em><span><strong>Atomes</strong></span></em></span> does the following:</p>
+<p>The only thing left to do after that it to select which set of coordinates are to be occupied among the list prepared in the previous steps. Depending on the occupancy defined at input <span><strong>atomes</strong></span> does the following:</p>
 <ul>
 <li><p>If the occupancy is equal to 1.0: all coordinates are to be occupied and no particular selection is performed.</p></li>
 <li><p>If the occupancy is &lt; 1.0, then the following options are possible to handle occupancy:</p>
@@ -192,7 +192,7 @@ In <span><em><span><strong>Atomes</strong></span></em></span> a duplicate posit
 For <a href="#iv" data-reference-type="ref" data-reference="iv">[iv]</a> and <a href="#v" data-reference-type="ref" data-reference="v">[v]</a> the order of the positions to be filled is the order they are found in during the previous steps.</p></li>
 </ul>
 <h3 class="unnumbered" id="final-check-distances-between-inserted-objects">Final check: distance(s) between inserted objects</h3>
-<p>Finally the last calculation performed by <span><em><span><strong>Atomes</strong></span></em></span> when creating the crystal is distance check between the object(s) be inserted. Note that this check performed, if and only if, no <span><em><span>overlapping</span></em></span> is allowed.<br />
+<p>Finally the last calculation performed by <span><strong>atomes</strong></span> when creating the crystal is distance check between the object(s) be inserted. Note that this check performed, if and only if, no <span><em><span>overlapping</span></em></span> is allowed.<br />
 If any distance <span class="math inline">\(d_{ab}\)</span> between 2 objects <span><em><span>a</span></em></span> and <span><em><span>b</span></em></span>, is found to be <span><em><span>too small</span></em></span> the following can happen:</p>
 <ol>
 <li><p>If <span class="math inline">\(d_{ab} &lt; 0.5\)</span> Å then a warning message will pop-up and ask for the user confirmation to continue, or not, to build the crystal.</p></li>

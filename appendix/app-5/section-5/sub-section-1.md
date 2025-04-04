@@ -1,6 +1,8 @@
 ---
-sort: 1
-date: 2025-01-15
+title: Size of the rings
+parent:  Ring statistics
+nav_order: 1
+date: 2025-04-04
 maths: 1
 ---
 

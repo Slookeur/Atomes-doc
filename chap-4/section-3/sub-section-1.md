@@ -1,6 +1,8 @@
 ---
-sort: 1
-date: 2025-01-15
+title: Right button contextual menu
+parent:  Mouse interaction with the data plot
+nav_order: 1
+date: 2025-04-04
 maths: 1
 ---
 

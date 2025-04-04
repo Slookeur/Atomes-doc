@@ -1,10 +1,12 @@
 ---
-sort: 3
-date: 2025-01-15
+title: Reading atomes workspace file(s)
+parent:  Files
+nav_order: 3
+date: 2025-04-04
 maths: 1
 ---
 
-# Reading Atomes workspace file(s)
+# Reading atomes workspace file(s)
 
 {% include chap-3/section-3/sub-section-3.html %}
 

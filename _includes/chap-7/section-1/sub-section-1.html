@@ -1,6 +1,6 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-<p>The <span><em><span><strong>Atomes</strong></span></em></span> helper for the <a href="https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx">DL-POLY</a> calculation offers to prepare input files for <span><strong>DL-POLY v4.09</strong></span>. The <span><strong>CONTROL</strong></span>, <span><strong>FIELD</strong></span> and <span><strong>CONFIG</strong></span> files can be entirely designed.<br />
+<p>The <span><strong>atomes</strong></span> helper for the <a href="https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx">DL-POLY</a> calculation offers to prepare input files for <span><strong>DL-POLY v4.09</strong></span>. The <span><strong>CONTROL</strong></span>, <span><strong>FIELD</strong></span> and <span><strong>CONFIG</strong></span> files can be entirely designed.<br />
 Before going further it is strongly advised to read the DL-POLY user manual:<br />
 <a href="ftp://ftp.dl.ac.uk/ccp5/DL_POLY/DL_POLY_4.0/DOCUMENTS/USRMAN4.pdf">ftp://ftp.dl.ac.uk/ccp5/DL_POLY/DL_POLY_4.0/DOCUMENTS/USRMAN4.pdf</a></p>
 <h5 id="initializing-the-force-field">Initializing the force field</h5>
@@ -57,7 +57,7 @@ The <span><strong>FIELD</strong></span> file parameters can be imported from the
 </ul></li>
 </ul>
 <p><br />
-Theses parameters are read by <span><em><span><strong>Atomes</strong></span></em></span> on the fly / by request from the corresponding files located in the directory: "<span><code>bin/library/force_fields</code></span>".</p></li>
+Theses parameters are read by <span><strong>atomes</strong></span> on the fly / by request from the corresponding files located in the directory: "<span><code>bin/library/force_fields</code></span>".</p></li>
 <li><p>The atoms description to initiate the force field, ie. the first "rough" type of field atoms for the initial description of the force field:</p>
 <ul>
 <li><p>The atomic species</p></li>
@@ -450,4 +450,4 @@ The next tabs of the assistant dedicated to intra-molecular properties are as fo
 <h5 id="finalizing-the-assistant-and-files-creation">Finalizing the assistant and file(s) creation</h5>
 <p>When pressing the "<span><code>Apply</code></span>" button on the file tab of the assistant, the user is asked to selected a folder. "<span><code>CONTROL</code></span>", "<span><code>FIELD</code></span>" and "<span><code>CONFIG</code></span>" if selected, will be created in the selected directory.<br />
 Following the file(s) creation or if the assistant is closed anyway, the "<span><code>DL-POLY</code></span>" force field data will be preserved. Therefore allowing the re-open the assistant later for further modifications.<br />
-All existing force field data can also saved in the <span><em><span><strong>Atomes</strong></span></em></span> project and/or workspace files, simply remember to save your work.</p>
+All existing force field data can also saved in the <span><strong>atomes</strong></span> project and/or workspace files, simply remember to save your work.</p>

@@ -1,6 +1,8 @@
 ---
-sort: 2
-date: 2025-01-15
+title: The Cell edition window
+parent:  The Edit submenu
+nav_order: 2
+date: 2025-04-04
 maths: 1
 ---
 

@@ -1,6 +1,8 @@
 ---
-sort: 3
-date: 2025-01-15
+title: VDW radii
+parent:  Atomic radii
+nav_order: 3
+date: 2025-04-04
 maths: 1
 ---
 

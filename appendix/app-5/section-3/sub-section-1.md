@@ -1,6 +1,8 @@
 ---
-sort: 1
-date: 2025-01-15
+title: Total scattering - Debye approach
+parent:  Neutrons and X-rays scattering
+nav_order: 1
+date: 2025-04-04
 maths: 1
 ---
 

@@ -1,6 +1,8 @@
 ---
-sort: 3
-date: 2025-01-15
+title: The Model edition window
+parent:  The Edit submenu
+nav_order: 3
+date: 2025-04-04
 maths: 1
 ---
 
