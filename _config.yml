@@ -1,5 +1,5 @@
 baseurl: "/Atomes-doc"
-title: <img width="25%" height="25%" src="/Atomes-doc/assets/images/atomes.svg"/>&nbsp;User manual
+title: <img width="40px" src="/Atomes-doc/assets/images/atomes.svg"/>&nbsp;User manual
 description: This site presents the documentation for the **atomes** program
 url: ""
 repository: Slookeur/Atomes-doc
@@ -103,7 +103,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on GitHub <svg style=\"position:relative; bottom:-3px\" width=\"15\" viewBox=\"0 0 24 24\" aria-labelledby=\"svg-external-link-title\"><use xlink:href=\"#svg-external-link\"></use></svg>"
+gh_edit_link_text: "Edit this page on GitHub <svg style=\"position:relative; bottom:-3px\" width=\"15px\" viewBox=\"0 0 24 24\" aria-labelledby=\"svg-external-link-title\"><use xlink:href=\"#svg-external-link\"></use></svg>"
 gh_edit_repository: "https://github.com/Slookeur/Atomes-doc" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
