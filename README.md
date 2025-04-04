@@ -5,7 +5,7 @@ nav_exclude: true
 date: 2025-04-01
 ---
 
-# <img width="50px" height="50px" style="position:relative; bottom:-15px" src="/Atomes-doc/assets/images/atomes.svg" /> **atomes: user manual**
+# <img width="50px" height="50px" style="position:relative; bottom:-15px" src="assets/images/atomes.svg" /> **atomes: user manual**
 
 ![](https://github.com/atomes/atomes-doc.io/workflows/ns/badge.svg)
 ![](https://www.codefactor.io/repository/github/atomes/atomes-doc/badge)
