@@ -1,1 +1,1 @@
-Sitemap: /Atomes-doc/sitemap.xml
+Sitemap: /atomes-doc/sitemap.xml
