@@ -2,7 +2,7 @@
 # <img width="50px" height="50px" style="position:relative; bottom:-15px" src="assets/images/atomes.svg" /> **atomes: user manual**
 
 ![](https://github.com/atomes/atomes-doc.io/workflows/ns/badge.svg)
-![](https://www.codefactor.io/repository/github/atomes/atomes-doc/badge)
+![](https://www.codefactor.io/repository/github/atomesbadge)
 
 ## Welcome to the documentation of the **atomes** program
 
@@ -44,4 +44,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 [jekyll]:https://jekyllrb.com/
 [atomes]:https://atomes.ipcms.fr/
 [atomes-doc]:atomes-manual.pdf
-[atomes-tuto]:/Atomes-tuto
+[atomes-tuto]:/atomes-tuto

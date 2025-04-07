@@ -1,7 +1,7 @@
 ---
 title: Preparing molecular dynamics calculations in atomes
 nav_order: 7
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 

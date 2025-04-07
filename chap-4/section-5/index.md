@@ -2,7 +2,7 @@
 title: Keyboard shortcuts
 parent:  Physico-chemical analysis in atomes
 nav_order: 5
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 

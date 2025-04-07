@@ -2,7 +2,7 @@
 title: Visual edition and model creation using atomes
 parent:  Features
 nav_order: 6
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 

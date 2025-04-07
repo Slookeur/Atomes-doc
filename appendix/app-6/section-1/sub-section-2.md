@@ -2,7 +2,7 @@
 title: Ionic radii
 parent:  Atomic radii
 nav_order: 2
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 

@@ -2,7 +2,7 @@
 title: The Crystal builder window
 parent:  The Edit submenu
 nav_order: 1
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 

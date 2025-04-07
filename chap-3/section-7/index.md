@@ -2,7 +2,7 @@
 title: Preparing MD calculations in atomes
 parent:  Features
 nav_order: 7
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 

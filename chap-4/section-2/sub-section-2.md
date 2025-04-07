@@ -2,7 +2,7 @@
 title: Plot edition
 parent:  Data and plot edition
 nav_order: 2
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 

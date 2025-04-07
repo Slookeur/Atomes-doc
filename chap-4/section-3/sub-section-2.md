@@ -2,7 +2,7 @@
 title: Left button zoom in and out
 parent:  Mouse interaction with the data plot
 nav_order: 2
-date: 2025-04-04
+date: 2025-04-07
 maths: 1
 ---
 
