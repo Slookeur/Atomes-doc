@@ -1,5 +1,8 @@
 #!/bin/bash
 
+GITUSER="Slookeur"
+GITEMAIL="sebastien.leroux@ipcms.unistra.fr"
+
 function main_only {
   cd atomes-main
 
@@ -10,17 +13,17 @@ function main_only {
   #git branch -M main
 
   # To link it to a github repo:
-  #git remote add origin git@github.com:Slookeur/Atomes-doc
+  git remote add origin git@github.com:$GITUSER/atomes-doc
 
-  git config user.name "Slookeur"
-  git config user.email "sebastien.leroux@ipcms.unistra.fr"
+  git config user.name $GITUSER
+  git config user.email $GITEMAIL
   git config pull.rebase false
   git fetch || printf "fetch did not work\n"
   # Basculement sur la branche "main"
   git checkout -b main || git checkout main
   git add .
   now=`date`
-  git commit -m "Atomes doc sources: $now"
+  git commit -m "atomes documentation sources: $now"
   git push origin main
   cd ..
 }
@@ -28,9 +31,14 @@ function main_only {
 function main {
   cd atomes-main
   cp -r ../atomes-jekyll/* .
+  cp -r ../prep-jekyll .
   rm -rf _site
-  sed 's/\/Atomes-doc\///g' index.md > README.md
-  cp README.md index.md
+  sed 's/\/atomes-doc\///g' index.md > README.md
+  nli=`cat README.md|wc -l`
+  let nlign=$nli
+  let nlign=$nlign-6
+  cat README.md|tail --lines=$nlign > index.md
+  cp index.md README.md
 
   # To init a git repository:
   #git init
@@ -39,17 +47,17 @@ function main {
   #git branch -M main
 
   # To link it to a github repo: 
-  #git remote add origin git@github.com:Slookeur/Atomes-doc
+  git remote add origin git@github.com:$GITUSER/atomes-doc
 
-  git config user.name "Slookeur"
-  git config user.email "sebastien.leroux@ipcms.unistra.fr"
+  git config user.name $GITUSER
+  git config user.email $GITEMAIL
   git config pull.rebase false
   git fetch || printf "fetch did not work\n"
   # Basculement sur la branche "main"
   git checkout -b main || git checkout main
   git add .
   now=`date`
-  git commit -m "Atomes doc sources: $now"
+  git commit -m "atomes doc sources: $now"
   git push origin main
   cd ..
 }
@@ -73,17 +81,17 @@ function deploy {
 #git branch -M main
 
 # To link it to a github repo: 
-#git remote add origin git@github.com:Slookeur/Atomes-doc
+  git remote add origin git@github.com:$GITUSER/atomes-doc
 
-  git config user.name "Slookeur"
-  git config user.email "sebastien.leroux@ipcms.unistra.fr"
+  git config user.name $GITUSER
+  git config user.email $GITEMAIL
   git config pull.rebase false
   git fetch || printf "fetch did not work\n"
   # Basculement sur la branche "gh-pages"
   git checkout -b gh-pages || git checkout gh-pages
   git add .
   now=`date`
-  git commit -m "Atomes doc website build: $now"
+  git commit -m "atomes doc website build: $now"
   git push origin gh-pages
   cd ..
 }
