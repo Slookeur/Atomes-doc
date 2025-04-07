@@ -45,3 +45,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 [slr]:https://www.ipcms.fr/sebastien-le-roux/
 [cnrs]:https://www.cnrs.fr/
+[ipcms]:https://www.ipcms.fr/
+[github]:https://github.com/
+[jekyll]:https://jekyllrb.com/
+[atomes]:https://atomes.ipcms.fr/
+[atomes-doc]:atomes-manual.pdf
+[atomes-tuto]:/Atomes-tuto
