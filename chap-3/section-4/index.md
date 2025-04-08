@@ -2,7 +2,7 @@
 title: Analyzing models using atomes
 parent:  Features
 nav_order: 4
-date: 2025-04-07
+date: 2025-04-08
 maths: 1
 ---
 

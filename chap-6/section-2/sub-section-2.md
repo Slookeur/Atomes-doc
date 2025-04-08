@@ -2,7 +2,7 @@
 title: The edition contextual menu
 parent:  Mouse interaction with the OpenGL window&#58; edition
 nav_order: 2
-date: 2025-04-07
+date: 2025-04-08
 maths: 1
 ---
 

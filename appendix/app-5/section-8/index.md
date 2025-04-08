@@ -2,7 +2,7 @@
 title: Mean square displacement of atoms
 parent:  The physics in atomes
 nav_order: 8
-date: 2025-04-07
+date: 2025-04-08
 maths: 1
 ---
 

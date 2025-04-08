@@ -2,7 +2,7 @@
 title: Distribution of bond lengths for the first coordination spheres
 parent:  Local atomic coordination properties
 nav_order: 4
-date: 2025-04-07
+date: 2025-04-08
 maths: 1
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Visual edition in atomes
 nav_order: 6
-date: 2025-04-07
+date: 2025-04-08
 maths: 1
 ---
 

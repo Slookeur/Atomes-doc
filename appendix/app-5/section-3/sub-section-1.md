@@ -2,7 +2,7 @@
 title: Total scattering - Debye approach
 parent:  Neutrons and X-rays scattering
 nav_order: 1
-date: 2025-04-07
+date: 2025-04-08
 maths: 1
 ---
 

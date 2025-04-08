@@ -2,7 +2,7 @@
 title: Keyboard shortcuts
 parent:  Keyboard shortcuts and command line options
 nav_order: 1
-date: 2025-04-07
+date: 2025-04-08
 maths: 1
 ---
 
