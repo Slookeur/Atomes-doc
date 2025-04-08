@@ -2,7 +2,7 @@
 title: Proportion of tetrahedral links and units in the structure model
 parent:  Local atomic coordination properties
 nav_order: 3
-date: 2025-04-08
+date: 2025-04-08 15:14:31
 maths: 1
 ---
 

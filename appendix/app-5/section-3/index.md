@@ -2,7 +2,7 @@
 title: Neutrons and X-rays scattering
 parent:  The physics in atomes
 nav_order: 3
-date: 2025-04-08
+date: 2025-04-08 15:14:31
 maths: 1
 ---
 

@@ -2,7 +2,7 @@
 title: Reading atomes project file(s)
 parent:  Files
 nav_order: 2
-date: 2025-04-08
+date: 2025-04-08 15:14:31
 maths: 1
 ---
 
